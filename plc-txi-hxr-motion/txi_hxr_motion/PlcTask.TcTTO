@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <Task Name="PlcTask" Id="{4271e288-8cb6-41b3-bd10-38827d63e75e}">
     <!--CycleTime in micro seconds.-->
     <CycleTime>10000</CycleTime>
     <Priority>20</Priority>
     <PouCall>
-      <Name>MAIN</Name>
+      <Name>PRG_IM2L1_PPM</Name>
     </PouCall>
     <TaskFBGuid>{ec6c6bb6-a819-40e0-86b7-fed0377d4fd9}</TaskFBGuid>
     <Fb_init>{6e506151-f461-48ca-994c-86c4244098a3}</Fb_init>
     <Fb_exit>{64b1dfdb-9160-4c24-955f-d0b5addbf2bc}</Fb_exit>
     <CycleUpdate>{6512b782-5b28-4c8f-8e1a-9dd5069a6cf5}</CycleUpdate>
     <PostCycleUpdate>{0bbe57c7-6c76-4264-b472-3d9a8454441d}</PostCycleUpdate>
-    <ObjectProperties />
   </Task>
 </TcPlcObject>
