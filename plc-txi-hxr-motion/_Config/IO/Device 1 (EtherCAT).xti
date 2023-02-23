@@ -30,10 +30,10 @@
 		<Image Id="1" AddrType="9" ImageType="3">
 			<Name>Image</Name>
 		</Image>
-		<Box File="Term 11 (EK1200) R17-DRL-03.xti" Id="7">
+		<Box File="R17-DRL-03 (EK1200).xti" Id="7">
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
 		</Box>
-		<Box File="Term 17 (EK1100) 100H1-L1S01-DRL-02.xti" Id="17">
+		<Box File="100H1-L1S01-DRL-02 (EK1100).xti" Id="17">
 			<EtherCAT PortABoxInfo="#x0100000c"/>
 		</Box>
 		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120"/>

@@ -1415,24 +1415,24 @@ External Setpoint Generation:
 	</Project>
 	<Mappings>
 		<OwnerA Name="txi_hxr_motion Instance">
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 17 (EK1100) 100H1-L1S01-DRL-02^Term 18 (EK1122) E1^Term 19 (EK1100) AL1L1-L2SI^AL1L1-EL2004">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^AL1L1-L2SI (EK1100)^AL1L1-EL2004">
 				<Link VarA="PlcTask Outputs^Main.M2.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 17 (EK1100) 100H1-L1S01-DRL-02^Term 18 (EK1122) E1^Term 19 (EK1100) AL1L1-L2SI^AL1L1-EL5042">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^AL1L1-L2SI (EK1100)^AL1L1-EL5042">
 				<Link VarA="PlcTask Inputs^Main.M2.nRawEncoderULINT" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 17 (EK1100) 100H1-L1S01-DRL-02^Term 18 (EK1122) E1^Term 19 (EK1100) AL1L1-L2SI^AL1L1-EL7041">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^AL1L1-L2SI (EK1100)^AL1L1-EL7041">
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 17 (EK1100) 100H1-L1S01-DRL-02^Term 18 (EK1122) E1^Term 24 (EK1100) IM2L1-PPM^IM2L1-EL2004">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL2004">
 				<Link VarA="PlcTask Outputs^Main.M1.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Outputs^PRG_IM2L1_PPM.fbIM2L1.fbGige.bGigePower" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 17 (EK1100) 100H1-L1S01-DRL-02^Term 18 (EK1122) E1^Term 24 (EK1100) IM2L1-PPM^IM2L1-EL3062">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL3062">
 				<Link VarA="PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.iVoltageINT" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 17 (EK1100) 100H1-L1S01-DRL-02^Term 18 (EK1122) E1^Term 24 (EK1100) IM2L1-PPM^IM2L1-EL3314">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL3314">
 				<Link VarA="PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.fbThermoCouple.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.fbThermoCouple.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.fbThermoCouple.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
@@ -1442,10 +1442,10 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbYagThermoCouple.bUnderrange" VarB="TC Inputs Channel 2^Status^Underrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbYagThermoCouple.iRaw" VarB="TC Inputs Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 17 (EK1100) 100H1-L1S01-DRL-02^Term 18 (EK1122) E1^Term 24 (EK1100) IM2L1-PPM^IM2L1-EL4004">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL4004">
 				<Link VarA="PlcTask Outputs^PRG_IM2L1_PPM.fbIM2L1.fbGige.iIlluminatorINT" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 17 (EK1100) 100H1-L1S01-DRL-02^Term 18 (EK1122) E1^Term 24 (EK1100) IM2L1-PPM^IM2L1-EL7041">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL7041">
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 			</OwnerB>

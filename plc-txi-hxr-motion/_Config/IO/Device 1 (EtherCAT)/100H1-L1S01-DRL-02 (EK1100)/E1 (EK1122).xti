@@ -7,10 +7,10 @@
 		<Name>__FILENAME__</Name>
 		<ImageId>1000</ImageId>
 		<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04622c52" RevisionNo="#x00120000" PortPhys="4883" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1122 2 port EtherCAT junction" Desc="EK1122"/>
-		<Box File="Term 19 (EK1100) AL1L1-L2SI.xti" Id="19">
+		<Box File="AL1L1-L2SI (EK1100).xti" Id="19">
 			<EtherCAT PortABoxInfo="#x03000012"/>
 		</Box>
-		<Box File="Term 24 (EK1100) IM2L1-PPM.xti" Id="24">
+		<Box File="IM2L1-PPM (EK1100).xti" Id="24">
 			<EtherCAT PortABoxInfo="#x01000012"/>
 		</Box>
 	</Box>
