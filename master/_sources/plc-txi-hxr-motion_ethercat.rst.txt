@@ -1,0 +1,201 @@
+Box Hierarchy
+-------------
+
+
+#. **R17-DRL-03 (EK1200) [ID: 7]**
+        EK1200-5000 EtherCAT Power supply (2A E-Bus)
+
+    #. Term 8 (EL6070) [ID: 8]
+            EL6070 1Ch. Licensing-Terminal
+
+
+
+    #. Term 9 (EL2202) [ID: 9]
+            EL2202 2Ch. Dig. Output 24V, 0.5A
+
+
+
+    #. Term 10 (EL6695) [ID: 10]
+            EL6695 EtherCAT Bridge terminal (Primary)
+
+
+
+    #. Term 11 (EK1122) [ID: 11]
+            EK1122 2 port EtherCAT junction
+
+
+
+    #. Term 12 (EK1110) [ID: 12]
+            EK1110 EtherCAT extension
+
+
+
+
+
+
+#. **100H1-L1S01-DRL-02 (EK1100) [ID: 17]**
+        EK1100 EtherCAT Coupler (2A E-Bus)
+
+    #. E1 (EK1122) [ID: 18]
+            EK1122 2 port EtherCAT junction
+
+        #. **AL1L1-L2SI (EK1100) [ID: 19]**
+                EK1100 EtherCAT Coupler (2A E-Bus)
+
+            #. AL1L1-EL7041 [ID: 20]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. AL1L1-EL5042 [ID: 21]
+                    EL5042 2Ch. BiSS-C Encoder
+
+
+
+            #. AL1L1-EL2004 [ID: 22]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. AL1L1-EL4004 [ID: 23]
+                    EL4004 4Ch. Ana. Output 0-10V, 12bit
+
+
+
+            #. AL1L1-EL9011 [ID: 34]
+                    EL9011 End Terminal
+
+
+
+
+
+        #. **IM2L1-PPM (EK1100) [ID: 24]**
+                EK1100 EtherCAT Coupler (2A E-Bus)
+
+            #. IM2L1-EL7041 [ID: 25]
+                    EL7041 1Ch. Stepper motor output stage (50V, 5A)
+
+
+
+            #. IM2L1-EL5042 [ID: 26]
+                    EL5042 2Ch. BiSS-C Encoder
+
+
+
+            #. IM2L1-EL2004 [ID: 27]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. IM2L1-EL3314 [ID: 28]
+                    EL3314 4Ch. Ana. Input Thermocouple (TC)
+
+
+
+            #. IM2L1-EL3052 [ID: 29]
+                    EL3052 2Ch. Ana. Input 4-20mA
+
+
+
+            #. IM2L1-EL3062 [ID: 30]
+                    EL3062 2Ch. Ana. Input 0-10V
+
+
+
+            #. IM2L1-EL4004 [ID: 31]
+                    EL4004 4Ch. Ana. Output 0-10V, 12bit
+
+
+
+            #. IM2L1-EL9011 [ID: 35]
+                    EL9011 End Terminal
+
+
+
+
+
+
+
+    #. E2 (EK1122) [ID: 32]
+            EK1122 2 port EtherCAT junction
+
+        #. **SL3L1-SCATTER (EK1100) [ID: 48]**
+                EK1100 EtherCAT Coupler (2A E-Bus)
+
+            #. SL3L1-EL7031-E1 [ID: 49]
+                    EL7031 1Ch. Stepper motor output stage (24V, 1.5A)
+
+
+
+            #. SL3L1-EL5101-E2 [ID: 50]
+                    EL5101 1Ch. Inc. Encoder 5V
+
+
+
+            #. SL3L1-EL7031-E3 [ID: 51]
+                    EL7031 1Ch. Stepper motor output stage (24V, 1.5A)
+
+
+
+            #. SL3L1-EL5101-E4 [ID: 52]
+                    EL5101 1Ch. Inc. Encoder 5V
+
+
+
+            #. SL3L1-EL7031-E5 [ID: 53]
+                    EL7031 1Ch. Stepper motor output stage (24V, 1.5A)
+
+
+
+            #. SL3L1-EL5101-E6 [ID: 54]
+                    EL5101 1Ch. Inc. Encoder 5V
+
+
+
+            #. SL3L1-EL7031-E7 [ID: 55]
+                    EL7031 1Ch. Stepper motor output stage (24V, 1.5A)
+
+
+
+            #. SL3L1-EL5101-E8 [ID: 56]
+                    EL5101 1Ch. Inc. Encoder 5V
+
+
+
+            #. SL3L1-EL9011-E9 [ID: 60]
+                    EL9011 End Terminal
+
+
+
+
+
+
+
+    #. Term 33 (EK1110) [ID: 33]
+            EK1110 EtherCAT extension
+
+
+
+
+
+
+#. **TXI Power Meter (EK1100) [ID: 68]**
+        EK1100 EtherCAT Coupler (2A E-Bus)
+
+    #. PM-EL3064 [ID: 69]
+            EL3064 4Ch. Ana. Input 0-10V
+
+
+
+    #. Term 70 (EK1122) [ID: 70]
+            EK1122 2 port EtherCAT junction
+
+
+
+    #. Term 74 (EL9011) [ID: 74]
+            EL9011 End Terminal
+
+
+
+
+
