@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{8FE3F9CA-54DE-E449-F28F-7722EB3D63DA}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{22F666A4-E088-3DB4-5940-ECF2505F45AB}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -44398,9 +44398,9 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.bLimitForwardEnable  := TIIB[SL3L1-EL7031]^STM Status^Status^Digital input 2;
-                              .bLimitBackwardEnable := TIIB[SL3L1-EL7031]^STM Status^Status^Digital input 1;
-                              .nRawEncoderUINT      := TIIB[SL3L1-EL5101]^ENC Status compact^Counter value</Value>
+                <Value>.bLimitForwardEnable  := TIIB[SL3L1-EL7031-E1]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable := TIIB[SL3L1-EL7031-E1]^STM Status^Status^Digital input 1;
+                              .nRawEncoderUINT      := TIIB[SL3L1-EL5101-E2]^ENC Status compact^Counter value</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -44425,9 +44425,9 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.bLimitForwardEnable  := TIIB[SL3L1-EL7031]^STM Status^Status^Digital input 2;
-                              .bLimitBackwardEnable := TIIB[SL3L1-EL7031]^STM Status^Status^Digital input 1;
-                              .nRawEncoderUINT      := TIIB[SL3L1-EL5101]^ENC Status compact^Counter value</Value>
+                <Value>.bLimitForwardEnable  := TIIB[SL3L1-EL7031-E3]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable := TIIB[SL3L1-EL7031-E3]^STM Status^Status^Digital input 1;
+                              .nRawEncoderUINT      := TIIB[SL3L1-EL5101-E4]^ENC Status compact^Counter value</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -44452,9 +44452,9 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.bLimitForwardEnable  := TIIB[SL3L1-EL7031]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable := TIIB[SL3L1-EL7031]^STM Status^Status^Digital input 2;
-                              .nRawEncoderUINT      := TIIB[SL3L1-EL5101]^ENC Status compact^Counter value</Value>
+                <Value>.bLimitForwardEnable  := TIIB[SL3L1-EL7031-E5]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable := TIIB[SL3L1-EL7031-E5]^STM Status^Status^Digital input 2;
+                              .nRawEncoderUINT      := TIIB[SL3L1-EL5101-E6]^ENC Status compact^Counter value</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -44479,9 +44479,9 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               </Property>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.bLimitForwardEnable  := TIIB[SL3L1-EL7031]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable := TIIB[SL3L1-EL7031]^STM Status^Status^Digital input 2;
-                              .nRawEncoderUINT      := TIIB[SL3L1-EL5101]^ENC Status compact^Counter value</Value>
+                <Value>.bLimitForwardEnable  := TIIB[SL3L1-EL7031-E7]^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable := TIIB[SL3L1-EL7031-E7]^STM Status^Status^Digital input 2;
+                              .nRawEncoderUINT      := TIIB[SL3L1-EL5101-E8]^ENC Status compact^Counter value</Value>
               </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
@@ -44774,7 +44774,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-02-23T09:58:36</Value>
+          <Value>2023-03-01T10:01:57</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
