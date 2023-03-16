@@ -1001,13 +1001,18 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{B86F757F-4916-4882-B19E-0F385C7B0296}" Name="txi_hxr_motion" PrjFilePath="..\..\txi_hxr_motion\txi_hxr_motion.plcproj" TmcFilePath="..\..\txi_hxr_motion\txi_hxr_motion.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_hxr_motion\txi_hxr_motion.tmc" TmcHash="{22F666A4-E088-3DB4-5940-ECF2505F45AB}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_hxr_motion\txi_hxr_motion.tmc" TmcHash="{D3D6602F-F064-43AE-6462-B30AE50FAFEF}">
 			<Name>txi_hxr_motion Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
 				<Var>
 					<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+					<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
+					<Name>lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
 					<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>

@@ -4,7 +4,7 @@
     <Declaration><![CDATA[PROGRAM PRG_IM2L1_PPM
 VAR
         {attribute 'pytmc' := '
-        pv: IM1K1:PPM
+        pv: IM2L1:PPM
         io: io
     '}
     {attribute 'TcLinkTo' := '.fbGige.iIlluminatorINT := TIIB[IM2L1-EL4004]^AO Outputs Channel 1^Analog output;

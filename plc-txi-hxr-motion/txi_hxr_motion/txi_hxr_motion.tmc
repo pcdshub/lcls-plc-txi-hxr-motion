@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{22F666A4-E088-3DB4-5940-ECF2505F45AB}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{D3D6602F-F064-43AE-6462-B30AE50FAFEF}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -210,31 +210,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>79701172</GetCodeOffs>
+        <GetCodeOffs>79711640</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>79701208</GetCodeOffs>
+        <GetCodeOffs>79711676</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79701216</GetCodeOffs>
+        <GetCodeOffs>79711684</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79701196</GetCodeOffs>
+        <GetCodeOffs>79711664</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79701212</GetCodeOffs>
+        <GetCodeOffs>79711680</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -1486,15 +1486,15 @@
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79701108</GetCodeOffs>
-        <SetCodeOffs>79701132</SetCodeOffs>
+        <GetCodeOffs>79711576</GetCodeOffs>
+        <SetCodeOffs>79711600</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79701148</GetCodeOffs>
-        <SetCodeOffs>79701160</SetCodeOffs>
+        <GetCodeOffs>79711616</GetCodeOffs>
+        <SetCodeOffs>79711628</SetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -1735,31 +1735,31 @@
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>79701264</GetCodeOffs>
+        <GetCodeOffs>79711732</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79701244</GetCodeOffs>
+        <GetCodeOffs>79711712</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79701332</GetCodeOffs>
+        <GetCodeOffs>79711800</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nUniqueId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>79701336</GetCodeOffs>
+        <GetCodeOffs>79711804</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79701292</GetCodeOffs>
+        <GetCodeOffs>79711760</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -1771,7 +1771,7 @@
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>79701340</GetCodeOffs>
+        <GetCodeOffs>79711808</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -2364,7 +2364,7 @@
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>79701368</GetCodeOffs>
+        <GetCodeOffs>79711836</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcDisplayTypeGUID</Name>
@@ -13023,7 +13023,454 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisParameter</Name>
+      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">ST_System</Name>
+      <Comment>Defacto system structure, must be included in all projects</Comment>
+      <BitSize>88</BitSize>
+      <SubItem>
+        <Name>xSwAlmRst</Name>
+        <Type>BOOL</Type>
+        <Comment> Global Alarm Reset - EPICS Command </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>xAtVacuum</Name>
+        <Type>BOOL</Type>
+        <Comment> System At Vacuum </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>8</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>xFirstScan</Name>
+        <Type>BOOL</Type>
+        <Comment> This boolean is true for the first scan, and is false thereafter, use for initialization of stuff </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>16</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>xOverrideMode</Name>
+        <Type>BOOL</Type>
+        <Comment>This bit is set when using the override features of the system</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>24</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>xIOState</Name>
+        <Type>BOOL</Type>
+        <Comment> ECat Bus Health </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>32</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>I_EcatMaster1</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+        <Comment> AMS Net ID used for FB_EcatDiag, among others </Comment>
+        <BitSize>48</BitSize>
+        <BitOffs>40</BitOffs>
+        <Properties>
+          <Property>
+            <Name>naming</Name>
+            <Value>omit</Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">E_Subsystem</Name>
+      <Comment>LCLS Defined subsystems, make sure these correspond with casSubsystems in FB_LogMessage</Comment>
+      <BitSize>16</BitSize>
+      <BaseType>WORD</BaseType>
+      <EnumInfo>
+        <Text>NILVALUE</Text>
+        <Enum>0</Enum>
+        <Comment>Undefined system</Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>VACUUM</Text>
+        <Enum>1</Enum>
+        <Comment>Vacuum control system</Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>MPS</Text>
+        <Enum>2</Enum>
+        <Comment>Machine protection system</Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>MOTION</Text>
+        <Enum>3</Enum>
+        <Comment>Motion control systems</Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>FIELDBUS</Text>
+        <Enum>4</Enum>
+        <Comment>EtherCAT networks</Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SDS</Text>
+        <Enum>5</Enum>
+        <Comment>Sample delivery system</Comment>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>OPTICS</Text>
+        <Enum>6</Enum>
+        <Comment>Optics control system</Comment>
+      </EnumInfo>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_LogMessage</Name>
+      <BitSize>81984</BitSize>
+      <SubItem>
+        <Name>sMsg</Name>
+        <Type Namespace="Tc2_System">T_MaxString</Type>
+        <Comment> Message to send</Comment>
+        <BitSize>2048</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>eSevr</Name>
+        <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>2080</BitOffs>
+        <Default>
+          <EnumText>TcEventSeverity.Verbose</EnumText>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>eSubsystem</Name>
+        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">E_Subsystem</Type>
+        <Comment> Subsystem</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>2096</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sJson</Name>
+        <Type>STRING(7000)</Type>
+        <Comment> JSON to add to the message</Comment>
+        <BitSize>56008</BitSize>
+        <BitOffs>2112</BitOffs>
+        <Default>
+          <String>{}</String>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nMinTimeViolationAcceptable</Name>
+        <Type>INT</Type>
+        <Comment> How many times the min. time can be violated before the CB trips</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>58128</BitOffs>
+        <Default>
+          <Value>5</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nLocalTripThreshold</Name>
+        <Type>TIME</Type>
+        <Comment> Minimum time between calls allowed, pairs with nMinTimeViolationAcceptable</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>58144</BitOffs>
+        <Default>
+          <DateTime>T#1ms</DateTime>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nTrickleTripThreshold</Name>
+        <Type>TIME</Type>
+        <Comment> Trickle trip, activated by global threshold, should be &gt;&gt; LocalTripThreshold</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>58176</BitOffs>
+        <Default>
+          <DateTime>T#100ms</DateTime>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nTripResetPeriod</Name>
+        <Type>TIME</Type>
+        <Comment> Time for auto-reset</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>58208</BitOffs>
+        <Default>
+          <DateTime>T#10m</DateTime>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bEnableAutoReset</Name>
+        <Type>BOOL</Type>
+        <Comment>Enable circuit breaker auto-reset (true by default)</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>58240</BitOffs>
+        <Default>
+          <Bool>true</Bool>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bInitialized</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>58248</BitOffs>
+        <Default>
+          <Bool>false</Bool>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>bInitFailed</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>58256</BitOffs>
+        <Default>
+          <Bool>false</Bool>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>sSubsystemSource</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>58264</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbMessage</Name>
+        <Type Namespace="LCLS_General.Tc3_EventLogger" ReferenceTo="true">FB_TcMessage</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>58912</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbMessages</Name>
+        <Type Namespace="LCLS_General.Tc3_EventLogger">FB_TcMessage</Type>
+        <ArrayInfo>
+          <LBound>0</LBound>
+          <Elements>5</Elements>
+        </ArrayInfo>
+        <BitSize>17440</BitSize>
+        <BitOffs>58944</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbSource</Name>
+        <Type Namespace="LCLS_General.Tc3_EventLogger">FB_TcSourceInfo</Type>
+        <BitSize>2848</BitSize>
+        <BitOffs>76384</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ipResultMessage</Name>
+        <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcMessage</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>79232</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>hr</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>79264</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>hrLastInternalError</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>79296</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>eTraceLevel</Name>
+        <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>79328</BitOffs>
+        <Default>
+          <EnumText>TcEventSeverity.Verbose</EnumText>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>bFirstCall</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>79344</BitOffs>
+        <Default>
+          <Bool>true</Bool>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>sPath</Name>
+        <Type Namespace="Tc2_System">T_MaxString</Type>
+        <BitSize>2048</BitSize>
+        <BitOffs>79352</BitOffs>
+        <Properties>
+          <Property>
+            <Name>instance-path</Name>
+          </Property>
+          <Property>
+            <Name>noinit</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nTotalEvents</Name>
+        <Type>UINT</Type>
+        <Comment>////////////////////////////</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>81408</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>nTimesViolated</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>81424</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>LastCallTime</Name>
+        <Type>ULINT</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81472</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>CurrentCallTime</Name>
+        <Type>ULINT</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81536</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>DeltaSinceLastCall</Name>
+        <Type>ULINT</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81600</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>WhenTripsCleared</Name>
+        <Type>ULINT</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81664</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ftTrippedReleased</Name>
+        <Type Namespace="Tc2_Standard">F_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81728</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>bLocalTrickleTripped</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>81792</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>bLocalTripped</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>81800</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>bTripped</Name>
+        <Type>BOOL</Type>
+        <Comment> Won't emit messages if true</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>81808</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+            pv: Tripped
+            io: i
+            field: DESC Log message FB tripped
+        </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bResetBreaker</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>81816</BitOffs>
+        <Properties>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+            pv: Reset
+            io: o
+            field: DESC Rising-edge reset of trip
+        </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>rtResetBreaker</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81824</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>rtTripped</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81888</BitOffs>
+      </SubItem>
+      <Action>
+        <Name>CircuitBreaker</Name>
+      </Action>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+        <Property>
+          <Name>reflection</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_AxisParameter</Name>
       <BitSize>1632</BitSize>
       <SubItem>
         <Name>PARAMSTRUCT</Name>
@@ -13492,7 +13939,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisParameter</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_AxisParameter</Name>
       <BitSize>1664</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -13505,7 +13952,7 @@
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisParameter</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_AxisParameter</Type>
         <BitSize>1632</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -13516,7 +13963,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisState</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_AxisState</Name>
       <BitSize>800</BitSize>
       <SubItem>
         <Name>ONLINESTRUCT</Name>
@@ -13759,7 +14206,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisState</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_AxisState</Name>
       <BitSize>832</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -13772,7 +14219,7 @@
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisState</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_AxisState</Type>
         <BitSize>800</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -13783,7 +14230,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisFunctions</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_AxisFunctions</Name>
       <BitSize>1792</BitSize>
       <SubItem>
         <Name>RESET</Name>
@@ -14337,7 +14784,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisFunctions</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_AxisFunctions</Name>
       <BitSize>1824</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -14350,7 +14797,7 @@
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_AxisFunctions</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_AxisFunctions</Type>
         <BitSize>1792</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -14361,23 +14808,23 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Axis</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_Axis</Name>
       <BitSize>4320</BitSize>
       <SubItem>
         <Name>Parameter</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisParameter</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_AxisParameter</Type>
         <BitSize>1664</BitSize>
         <BitOffs>0</BitOffs>
       </SubItem>
       <SubItem>
         <Name>State</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisState</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_AxisState</Type>
         <BitSize>832</BitSize>
         <BitOffs>1664</BitOffs>
       </SubItem>
       <SubItem>
         <Name>Functions</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_AxisFunctions</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_AxisFunctions</Type>
         <BitSize>1824</BitSize>
         <BitOffs>2496</BitOffs>
       </SubItem>
@@ -14388,7 +14835,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableParameter</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_TableParameter</Name>
       <BitSize>192</BitSize>
       <SubItem>
         <Name>MFREADCHARACVALUES</Name>
@@ -14457,7 +14904,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableParameter</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_TableParameter</Name>
       <BitSize>224</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -14470,7 +14917,7 @@
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableParameter</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_TableParameter</Type>
         <BitSize>192</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -14481,7 +14928,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableFunctions</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_TableFunctions</Name>
       <BitSize>96</BitSize>
       <SubItem>
         <Name>CREATETAB</Name>
@@ -14520,7 +14967,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableFunctions</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_TableFunctions</Name>
       <BitSize>128</BitSize>
       <SubItem>
         <Name>IDXGRP</Name>
@@ -14533,7 +14980,7 @@
       </SubItem>
       <SubItem>
         <Name>IDXOFFS</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_IDXOFFS_TableFunctions</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_IDXOFFS_TableFunctions</Type>
         <BitSize>96</BitSize>
         <BitOffs>32</BitOffs>
       </SubItem>
@@ -14544,17 +14991,17 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Table</Name>
+      <Name Namespace="Tc2_MC2">_ST_NCADS_Table</Name>
       <BitSize>352</BitSize>
       <SubItem>
         <Name>Parameter</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableParameter</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_TableParameter</Type>
         <BitSize>224</BitSize>
         <BitOffs>0</BitOffs>
       </SubItem>
       <SubItem>
         <Name>Functions</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_TableFunctions</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_TableFunctions</Type>
         <BitSize>128</BitSize>
         <BitOffs>224</BitOffs>
       </SubItem>
@@ -14705,7 +15152,7 @@
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_TCMCGLOBAL</Name>
+      <Name Namespace="Tc2_MC2">_TCMCGLOBAL</Name>
       <Comment>	Global constants and parameters </Comment>
       <BitSize>6976</BitSize>
       <SubItem>
@@ -14896,7 +15343,7 @@
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Axis</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_Axis</Type>
         <Comment> IDXGRP and IDXOFFS constants of axis parameter/status/functions </Comment>
         <BitSize>4320</BitSize>
         <BitOffs>800</BitOffs>
@@ -14913,7 +15360,7 @@
       </SubItem>
       <SubItem>
         <Name>Table</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_NCADS_Table</Type>
+        <Type Namespace="Tc2_MC2">_ST_NCADS_Table</Type>
         <Comment> IDXGRP and IDXOFFS constants of table parameter/status/functions </Comment>
         <BitSize>352</BitSize>
         <BitOffs>5120</BitOffs>
@@ -16224,7 +16671,7 @@ External Setpoint Generation:
       </Relations>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AdsAddress</Name>
+      <Name Namespace="Tc2_MC2">ST_AdsAddress</Name>
       <BitSize>224</BitSize>
       <SubItem>
         <Name>NetId</Name>
@@ -16246,7 +16693,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_AxisStates</Name>
+      <Name Namespace="Tc2_MC2">MC_AxisStates</Name>
       <Comment> 	PLCopen axis states
 	The axis states are defined in the PLCopen state diagram
 </Comment>
@@ -16290,7 +16737,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AxisOpModes</Name>
+      <Name Namespace="Tc2_MC2">ST_AxisOpModes</Name>
       <Comment> axis operation mode feedback from NcToPlc. </Comment>
       <BitSize>136</BitSize>
       <SubItem>
@@ -16414,7 +16861,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AxisStatus</Name>
+      <Name Namespace="Tc2_MC2">ST_AxisStatus</Name>
       <BitSize>768</BitSize>
       <SubItem>
         <Name>UpdateTaskIndex</Name>
@@ -16446,7 +16893,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>MotionState</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_AxisStates</Type>
+        <Type Namespace="Tc2_MC2">MC_AxisStates</Type>
         <Comment> motion state in the PLCopen state diagram </Comment>
         <BitSize>16</BitSize>
         <BitOffs>192</BitOffs>
@@ -16759,7 +17206,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>OpMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AxisOpModes</Type>
+        <Type Namespace="Tc2_MC2">ST_AxisOpModes</Type>
         <Comment> axis operation mode feedback from NcToPlc </Comment>
         <BitSize>136</BitSize>
         <BitOffs>592</BitOffs>
@@ -16779,7 +17226,7 @@ External Setpoint Generation:
       <BaseType GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</BaseType>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_NcDriveType</Name>
+      <Name Namespace="Tc2_MC2">E_NcDriveType</Name>
       <BitSize>32</BitSize>
       <BaseType>DWORD</BaseType>
       <EnumInfo>
@@ -16891,7 +17338,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_NcEncoderType</Name>
+      <Name Namespace="Tc2_MC2">E_NcEncoderType</Name>
       <BitSize>32</BitSize>
       <BaseType>DWORD</BaseType>
       <EnumInfo>
@@ -17039,7 +17486,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_NcAxisType</Name>
+      <Name Namespace="Tc2_MC2">E_NcAxisType</Name>
       <BitSize>32</BitSize>
       <BaseType>DWORD</BaseType>
       <EnumInfo>
@@ -17082,7 +17529,7 @@ External Setpoint Generation:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_DriveAddress</Name>
+      <Name Namespace="Tc2_MC2">ST_DriveAddress</Name>
       <BitSize>672</BitSize>
       <SubItem>
         <Name>NetID</Name>
@@ -17128,7 +17575,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>NcDriveType</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_NcDriveType</Type>
+        <Type Namespace="Tc2_MC2">E_NcDriveType</Type>
         <Comment> type enumeration of the NC software drive of an axis </Comment>
         <BitSize>32</BitSize>
         <BitOffs>352</BitOffs>
@@ -17149,7 +17596,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>NcEncoderType</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_NcEncoderType</Type>
+        <Type Namespace="Tc2_MC2">E_NcEncoderType</Type>
         <Comment> type enumeration of the NC encoder drive of an axis </Comment>
         <BitSize>32</BitSize>
         <BitOffs>448</BitOffs>
@@ -17163,7 +17610,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>NcAxisType</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_NcAxisType</Type>
+        <Type Namespace="Tc2_MC2">E_NcAxisType</Type>
         <Comment> type enumeration of the NC axis </Comment>
         <BitSize>32</BitSize>
         <BitOffs>512</BitOffs>
@@ -17200,7 +17647,7 @@ External Setpoint Generation:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_PhasingState</Name>
+      <Name Namespace="Tc2_MC2">_E_PhasingState</Name>
       <Comment> Phasing internal probe states </Comment>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
@@ -17223,7 +17670,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_InternalAxisRefData</Name>
+      <Name Namespace="Tc2_MC2">_InternalAxisRefData</Name>
       <BitSize>128</BitSize>
       <SubItem>
         <Name>NcCycleCounterAvailable</Name>
@@ -17255,7 +17702,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>PhasingState</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_PhasingState</Type>
+        <Type Namespace="Tc2_MC2">_E_PhasingState</Type>
         <Comment> KSt 20190703 global handshake for phasing blocks</Comment>
         <BitSize>16</BitSize>
         <BitOffs>96</BitOffs>
@@ -17267,7 +17714,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">AXIS_REF</Name>
+      <Name Namespace="Tc2_MC2">AXIS_REF</Name>
       <Comment>
 	AXIS_REF data structure
 
@@ -17313,7 +17760,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>ADS</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AdsAddress</Type>
+        <Type Namespace="Tc2_MC2">ST_AdsAddress</Type>
         <BitSize>224</BitSize>
         <BitOffs>3136</BitOffs>
         <Properties>
@@ -17325,7 +17772,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>Status</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AxisStatus</Type>
+        <Type Namespace="Tc2_MC2">ST_AxisStatus</Type>
         <BitSize>768</BitSize>
         <BitOffs>3392</BitOffs>
         <Properties>
@@ -17337,7 +17784,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>DriveAddress</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_DriveAddress</Type>
+        <Type Namespace="Tc2_MC2">ST_DriveAddress</Type>
         <BitSize>672</BitSize>
         <BitOffs>4160</BitOffs>
         <Properties>
@@ -17349,7 +17796,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>_internal</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_InternalAxisRefData</Type>
+        <Type Namespace="Tc2_MC2">_InternalAxisRefData</Type>
         <BitSize>128</BitSize>
         <BitOffs>4832</BitOffs>
         <Properties>
@@ -17486,7 +17933,7 @@ External Setpoint Generation:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AxisParameterSet</Name>
+      <Name Namespace="Tc2_MC2">ST_AxisParameterSet</Name>
       <BitSize>8192</BitSize>
       <SubItem>
         <Name>AxisId</Name>
@@ -17497,7 +17944,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>nAxisType</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_NcAxisType</Type>
+        <Type Namespace="Tc2_MC2">E_NcAxisType</Type>
         <Comment> 0x00000003 </Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -17700,7 +18147,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>nEncType</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_NcEncoderType</Type>
+        <Type Namespace="Tc2_MC2">E_NcEncoderType</Type>
         <Comment> 0x00010003 </Comment>
         <BitSize>32</BitSize>
         <BitOffs>2080</BitOffs>
@@ -17959,7 +18406,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>nDriveType</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_NcDriveType</Type>
+        <Type Namespace="Tc2_MC2">E_NcDriveType</Type>
         <Comment> 0x00030003 </Comment>
         <BitSize>32</BitSize>
         <BitOffs>4256</BitOffs>
@@ -18199,7 +18646,7 @@ External Setpoint Generation:
       <BitSize>21248</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2">AXIS_REF</Type>
         <Comment> Hardware 
  PLC Axis Reference</Comment>
         <BitSize>9088</BitSize>
@@ -19040,7 +19487,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>stAxisParameters</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AxisParameterSet</Type>
+        <Type Namespace="Tc2_MC2">ST_AxisParameterSet</Type>
         <Comment> MC_ReadParameterSet Output</Comment>
         <BitSize>8192</BitSize>
         <BitOffs>12160</BitOffs>
@@ -20081,19 +20528,19 @@ These features efficiently address the addition, removal, and verification of be
       </SubItem>
       <SubItem>
         <Name>__FB_ARBITER__GETARBITRATEDBP__FBLOGMESSAGE</Name>
-        <Type Namespace="LCLS_General">FB_LogMessage</Type>
+        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_LogMessage</Type>
         <BitSize>81984</BitSize>
         <BitOffs>221504</BitOffs>
       </SubItem>
       <SubItem>
         <Name>__FB_ARBITER__ADDREQUEST__FBLOG</Name>
-        <Type Namespace="LCLS_General">FB_LogMessage</Type>
+        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_LogMessage</Type>
         <BitSize>81984</BitSize>
         <BitOffs>303488</BitOffs>
       </SubItem>
       <SubItem>
         <Name>__FB_ARBITER__REMOVEREQUEST__FBLOG</Name>
-        <Type Namespace="LCLS_General">FB_LogMessage</Type>
+        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_LogMessage</Type>
         <BitSize>81984</BitSize>
         <BitOffs>385472</BitOffs>
       </SubItem>
@@ -20206,7 +20653,7 @@ ELSE:
         </Local>
         <Local>
           <Name>fbLogMessage</Name>
-          <Type Namespace="LCLS_General">FB_LogMessage</Type>
+          <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_LogMessage</Type>
           <BitSize>81984</BitSize>
           <Properties>
             <Property>
@@ -20284,7 +20731,7 @@ ELSE:
         </Local>
         <Local>
           <Name>fbLog</Name>
-          <Type Namespace="LCLS_General">FB_LogMessage</Type>
+          <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_LogMessage</Type>
           <BitSize>81984</BitSize>
           <Properties>
             <Property>
@@ -20306,7 +20753,7 @@ ELSE:
         </Parameter>
         <Local>
           <Name>fbLog</Name>
-          <Type Namespace="LCLS_General">FB_LogMessage</Type>
+          <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_LogMessage</Type>
           <BitSize>81984</BitSize>
           <Properties>
             <Property>
@@ -23433,7 +23880,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbLogger</Name>
-        <Type Namespace="LCLS_General">FB_LogMessage</Type>
+        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_LogMessage</Type>
         <BitSize>81984</BitSize>
         <BitOffs>413056</BitOffs>
         <Default>
@@ -23613,7 +24060,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Name>
+      <Name Namespace="Tc2_MC2">_E_TcMC_STATES</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
       <EnumInfo>
@@ -23643,7 +24090,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Name>
+      <Name Namespace="Tc2_MC2">_ST_FunctionBlockResults</Name>
       <BitSize>96</BitSize>
       <SubItem>
         <Name>Done</Name>
@@ -23695,11 +24142,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Reset</Name>
+      <Name Namespace="Tc2_MC2">MC_Reset</Name>
       <BitSize>1632</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -23787,7 +24234,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>144</BitOffs>
         <Default>
@@ -23796,7 +24243,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>160</BitOffs>
       </SubItem>
@@ -23819,7 +24266,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Name>
+      <Name Namespace="Tc2_MC2">MC_BufferMode</Name>
       <BitSize>16</BitSize>
       <BaseType>UINT</BaseType>
       <EnumInfo>
@@ -23848,15 +24295,15 @@ ELSE:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_PowerOptions</Name>
+      <Name Namespace="Tc2_MC2">ST_PowerOptions</Name>
       <BitSize>0</BitSize>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Power</Name>
+      <Name Namespace="Tc2_MC2">MC_Power</Name>
       <BitSize>768</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -23924,7 +24371,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="Tc2_MC2">MC_BufferMode</Type>
         <Comment> V </Comment>
         <BitSize>16</BitSize>
         <BitOffs>192</BitOffs>
@@ -23937,7 +24384,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_PowerOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_PowerOptions</Type>
         <BitSize>0</BitSize>
         <BitOffs>208</BitOffs>
         <Properties>
@@ -24060,7 +24507,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Name>
+      <Name Namespace="Tc2_MC2">ST_MoveOptions</Name>
       <BitSize>320</BitSize>
       <SubItem>
         <Name>EnableBlendingPosition</Name>
@@ -24106,7 +24553,7 @@ ELSE:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Name>
+      <Name Namespace="Tc2_MC2">_E_TcNC_StartPosType</Name>
       <BitSize>16</BitSize>
       <BaseType>UINT</BaseType>
       <EnumInfo>
@@ -24216,7 +24663,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_TorqueControlOptions</Name>
+      <Name Namespace="Tc2_MC2">ST_TorqueControlOptions</Name>
       <BitSize>128</BitSize>
       <SubItem>
         <Name>EnableManualTorqueStartValue</Name>
@@ -24232,7 +24679,7 @@ ELSE:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartRequest</Name>
+      <Name Namespace="Tc2_MC2">_ST_TcNC_UnversalAxisStartRequest</Name>
       <BitSize>640</BitSize>
       <SubItem>
         <Name>nStartType</Name>
@@ -24325,7 +24772,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UniversalAxisTorqueStartRequest</Name>
+      <Name Namespace="Tc2_MC2">_ST_TcNC_UniversalAxisTorqueStartRequest</Name>
       <BitSize>576</BitSize>
       <SubItem>
         <Name>nStartType</Name>
@@ -24411,7 +24858,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Name>
+      <Name Namespace="Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Name>
       <BitSize>32</BitSize>
       <SubItem>
         <Name>nCmdNo</Name>
@@ -24434,7 +24881,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNc_OperationModes</Name>
+      <Name Namespace="Tc2_MC2">_ST_TcNc_OperationModes</Name>
       <BitSize>128</BitSize>
       <SubItem>
         <Name>PosAreaControl</Name>
@@ -24510,11 +24957,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Name>
+      <Name Namespace="Tc2_MC2">_FB_MoveUniversalGeneric</Name>
       <BitSize>7680</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -24527,7 +24974,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">_ST_FunctionBlockResults</Type>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -24551,7 +24998,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>StartType</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Type>
+        <Type Namespace="Tc2_MC2">_E_TcNC_StartPosType</Type>
         <Comment> 20110511 KSt type changed for Tc3 </Comment>
         <BitSize>16</BitSize>
         <BitOffs>112</BitOffs>
@@ -24672,7 +25119,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="Tc2_MC2">MC_BufferMode</Type>
         <Comment>	Direction			:	MC_Direction := MC_Positive_Direction;	
  E </Comment>
         <BitSize>16</BitSize>
@@ -24686,7 +25133,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_MoveOptions</Type>
         <BitSize>320</BitSize>
         <BitOffs>768</BitOffs>
         <Properties>
@@ -24698,7 +25145,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>OptionsTorque</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_TorqueControlOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_TorqueControlOptions</Type>
         <BitSize>128</BitSize>
         <BitOffs>1088</BitOffs>
         <Properties>
@@ -24862,7 +25309,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>1344</BitOffs>
         <Default>
@@ -24871,19 +25318,19 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>sStartRequest</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartRequest</Type>
+        <Type Namespace="Tc2_MC2">_ST_TcNC_UnversalAxisStartRequest</Type>
         <BitSize>640</BitSize>
         <BitOffs>1408</BitOffs>
       </SubItem>
       <SubItem>
         <Name>sTorqueStartRequest</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UniversalAxisTorqueStartRequest</Type>
+        <Type Namespace="Tc2_MC2">_ST_TcNC_UniversalAxisTorqueStartRequest</Type>
         <BitSize>576</BitSize>
         <BitOffs>2048</BitOffs>
       </SubItem>
       <SubItem>
         <Name>sStartResponse</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Type>
+        <Type Namespace="Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Type>
         <BitSize>32</BitSize>
         <BitOffs>2624</BitOffs>
       </SubItem>
@@ -24913,7 +25360,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>EmptyStartResponse</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Type>
+        <Type Namespace="Tc2_MC2">_ST_TcNC_UnversalAxisStartResponse</Type>
         <BitSize>32</BitSize>
         <BitOffs>4160</BitOffs>
       </SubItem>
@@ -25063,7 +25510,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>OpMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNc_OperationModes</Type>
+        <Type Namespace="Tc2_MC2">_ST_TcNc_OperationModes</Type>
         <BitSize>128</BitSize>
         <BitOffs>7520</BitOffs>
         <Properties>
@@ -25108,11 +25555,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Halt</Name>
+      <Name Namespace="Tc2_MC2">MC_Halt</Name>
       <BitSize>8640</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -25161,7 +25608,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>256</BitOffs>
         <Properties>
@@ -25173,7 +25620,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_MoveOptions</Type>
         <Comment> optional parameters </Comment>
         <BitSize>320</BitSize>
         <BitOffs>320</BitOffs>
@@ -25262,7 +25709,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>736</BitOffs>
       </SubItem>
@@ -25274,7 +25721,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>896</BitOffs>
       </SubItem>
@@ -25292,7 +25739,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_JogMode</Name>
+      <Name Namespace="Tc2_MC2">E_JogMode</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
       <EnumInfo>
@@ -25322,7 +25769,7 @@ ELSE:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Direction</Name>
+      <Name Namespace="Tc2_MC2">MC_Direction</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
       <EnumInfo>
@@ -25347,11 +25794,11 @@ ELSE:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Name>
+      <Name Namespace="Tc2_MC2">MC_MoveVelocity</Name>
       <BitSize>8768</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -25426,7 +25873,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Direction</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>384</BitOffs>
         <Default>
@@ -25441,7 +25888,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>400</BitOffs>
         <Properties>
@@ -25453,7 +25900,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_MoveOptions</Type>
         <BitSize>320</BitSize>
         <BitOffs>448</BitOffs>
         <Properties>
@@ -25542,7 +25989,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>864</BitOffs>
       </SubItem>
@@ -25554,7 +26001,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>1024</BitOffs>
       </SubItem>
@@ -25572,7 +26019,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Name>
+      <Name Namespace="Tc2_MC2">ST_McOutputs</Name>
       <BitSize>96</BitSize>
       <SubItem>
         <Name>Done</Name>
@@ -25618,11 +26065,11 @@ ELSE:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveAbsolute</Name>
+      <Name Namespace="Tc2_MC2">MC_MoveAbsolute</Name>
       <BitSize>8832</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -25713,7 +26160,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="Tc2_MC2">MC_BufferMode</Type>
         <Comment>	Direction			:	MC_Direction; 
  not available </Comment>
         <BitSize>16</BitSize>
@@ -25727,7 +26174,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_MoveOptions</Type>
         <Comment> optional parameters </Comment>
         <BitSize>320</BitSize>
         <BitOffs>512</BitOffs>
@@ -25816,7 +26263,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>928</BitOffs>
       </SubItem>
@@ -25828,7 +26275,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>1088</BitOffs>
       </SubItem>
@@ -25846,11 +26293,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveRelative</Name>
+      <Name Namespace="Tc2_MC2">MC_MoveRelative</Name>
       <BitSize>8832</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -25937,7 +26384,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>448</BitOffs>
         <Properties>
@@ -25949,7 +26396,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_MoveOptions</Type>
         <BitSize>320</BitSize>
         <BitOffs>512</BitOffs>
         <Properties>
@@ -26037,7 +26484,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>928</BitOffs>
       </SubItem>
@@ -26049,7 +26496,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>1088</BitOffs>
       </SubItem>
@@ -26067,11 +26514,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Jog</Name>
+      <Name Namespace="Tc2_MC2">MC_Jog</Name>
       <BitSize>44352</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -26108,7 +26555,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Mode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_JogMode</Type>
+        <Type Namespace="Tc2_MC2">E_JogMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>80</BitOffs>
         <Properties>
@@ -26262,7 +26709,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>576</BitOffs>
       </SubItem>
@@ -26280,19 +26727,19 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>MoveVelocity</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Type>
+        <Type Namespace="Tc2_MC2">MC_MoveVelocity</Type>
         <BitSize>8768</BitSize>
         <BitOffs>704</BitOffs>
       </SubItem>
       <SubItem>
         <Name>MoveVelocityOut</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>9472</BitOffs>
       </SubItem>
       <SubItem>
         <Name>Direction</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>9568</BitOffs>
       </SubItem>
@@ -26304,13 +26751,13 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Halt</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Halt</Type>
+        <Type Namespace="Tc2_MC2">MC_Halt</Type>
         <BitSize>8640</BitSize>
         <BitOffs>9600</BitOffs>
       </SubItem>
       <SubItem>
         <Name>HaltOut</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>18240</BitOffs>
       </SubItem>
@@ -26322,13 +26769,13 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>MoveAbsolute</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveAbsolute</Type>
+        <Type Namespace="Tc2_MC2">MC_MoveAbsolute</Type>
         <BitSize>8832</BitSize>
         <BitOffs>18368</BitOffs>
       </SubItem>
       <SubItem>
         <Name>MoveAbsoluteOut</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>27200</BitOffs>
       </SubItem>
@@ -26340,25 +26787,25 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>MoveRelative</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveRelative</Type>
+        <Type Namespace="Tc2_MC2">MC_MoveRelative</Type>
         <BitSize>8832</BitSize>
         <BitOffs>27328</BitOffs>
       </SubItem>
       <SubItem>
         <Name>MoveRelativeOut</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>36160</BitOffs>
       </SubItem>
       <SubItem>
         <Name>JogMove</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>36288</BitOffs>
       </SubItem>
       <SubItem>
         <Name>LastJogMoveResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>43968</BitOffs>
       </SubItem>
@@ -26370,13 +26817,13 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>StartType</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Type>
+        <Type Namespace="Tc2_MC2">_E_TcNC_StartPosType</Type>
         <BitSize>16</BitSize>
         <BitOffs>44080</BitOffs>
       </SubItem>
       <SubItem>
         <Name>JogMoveOut</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_McOutputs</Type>
+        <Type Namespace="Tc2_MC2">ST_McOutputs</Type>
         <BitSize>96</BitSize>
         <BitOffs>44096</BitOffs>
       </SubItem>
@@ -26412,11 +26859,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveModulo</Name>
+      <Name Namespace="Tc2_MC2">MC_MoveModulo</Name>
       <BitSize>8896</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -26501,7 +26948,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Direction</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="Tc2_MC2">MC_Direction</Type>
         <Comment> modulo shortest way, modulo positive, modulo negative </Comment>
         <BitSize>16</BitSize>
         <BitOffs>448</BitOffs>
@@ -26514,7 +26961,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="Tc2_MC2">MC_BufferMode</Type>
         <Comment> E </Comment>
         <BitSize>16</BitSize>
         <BitOffs>464</BitOffs>
@@ -26527,7 +26974,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_MoveOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_MoveOptions</Type>
         <BitSize>320</BitSize>
         <BitOffs>512</BitOffs>
         <Properties>
@@ -26615,7 +27062,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>928</BitOffs>
       </SubItem>
@@ -26627,13 +27074,13 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>MoveGeneric</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_FB_MoveUniversalGeneric</Type>
+        <Type Namespace="Tc2_MC2">_FB_MoveUniversalGeneric</Type>
         <BitSize>7680</BitSize>
         <BitOffs>1088</BitOffs>
       </SubItem>
       <SubItem>
         <Name>StartType</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcNC_StartPosType</Type>
+        <Type Namespace="Tc2_MC2">_E_TcNC_StartPosType</Type>
         <BitSize>16</BitSize>
         <BitOffs>8768</BitOffs>
       </SubItem>
@@ -26660,7 +27107,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_HomingMode</Name>
+      <Name Namespace="Tc2_MC2">MC_HomingMode</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
       <EnumInfo>
@@ -26710,7 +27157,7 @@ ELSE:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_EncoderReferenceMode</Name>
+      <Name Namespace="Tc2_MC2">E_EncoderReferenceMode</Name>
       <BitSize>32</BitSize>
       <BaseType>UDINT</BaseType>
       <EnumInfo>
@@ -26751,7 +27198,7 @@ ELSE:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_HomingOptions</Name>
+      <Name Namespace="Tc2_MC2">ST_HomingOptions</Name>
       <BitSize>320</BitSize>
       <SubItem>
         <Name>ClearPositionLag</Name>
@@ -26762,7 +27209,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>SearchDirection</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>16</BitOffs>
         <Default>
@@ -26777,7 +27224,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>SyncDirection</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>128</BitOffs>
         <Default>
@@ -26792,7 +27239,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>ReferenceMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_EncoderReferenceMode</Type>
+        <Type Namespace="Tc2_MC2">E_EncoderReferenceMode</Type>
         <BitSize>32</BitSize>
         <BitOffs>256</BitOffs>
         <Default>
@@ -26801,7 +27248,7 @@ ELSE:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_SetPositionOptions</Name>
+      <Name Namespace="Tc2_MC2">ST_SetPositionOptions</Name>
       <BitSize>32</BitSize>
       <SubItem>
         <Name>ClearPositionLag</Name>
@@ -26826,7 +27273,7 @@ ELSE:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_SetPosOnTheFly</Name>
+      <Name Namespace="Tc2_MC2">_ST_TcNC_SetPosOnTheFly</Name>
       <BitSize>256</BitSize>
       <SubItem>
         <Name>nPosSetType</Name>
@@ -26873,11 +27320,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Name>
+      <Name Namespace="Tc2_MC2">MC_SetPosition</Name>
       <BitSize>1984</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -26929,7 +27376,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_SetPositionOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_SetPositionOptions</Type>
         <Comment> Beckhoff proprietary input </Comment>
         <BitSize>32</BitSize>
         <BitOffs>208</BitOffs>
@@ -27004,13 +27451,13 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>stSetPos</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_SetPosOnTheFly</Type>
+        <Type Namespace="Tc2_MC2">_ST_TcNC_SetPosOnTheFly</Type>
         <BitSize>256</BitSize>
         <BitOffs>384</BitOffs>
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>640</BitOffs>
         <Default>
@@ -27042,11 +27489,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Home</Name>
+      <Name Namespace="Tc2_MC2">MC_Home</Name>
       <BitSize>7168</BitSize>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -27086,7 +27533,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>HomingMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_HomingMode</Type>
+        <Type Namespace="Tc2_MC2">MC_HomingMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>192</BitOffs>
         <Properties>
@@ -27098,7 +27545,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>208</BitOffs>
         <Properties>
@@ -27110,7 +27557,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_HomingOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_HomingOptions</Type>
         <Comment> Beckhoff proprietary input </Comment>
         <BitSize>320</BitSize>
         <BitOffs>256</BitOffs>
@@ -27212,7 +27659,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>672</BitOffs>
         <Properties>
@@ -27234,7 +27681,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>784</BitOffs>
         <Default>
@@ -27303,7 +27750,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbSetPosition</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Type>
+        <Type Namespace="Tc2_MC2">MC_SetPosition</Type>
         <BitSize>1984</BitSize>
         <BitOffs>4544</BitOffs>
         <Properties>
@@ -27369,7 +27816,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>ReferenceMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">E_EncoderReferenceMode</Type>
+        <Type Namespace="Tc2_MC2">E_EncoderReferenceMode</Type>
         <BitSize>32</BitSize>
         <BitOffs>6848</BitOffs>
         <Properties>
@@ -27512,7 +27959,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>224</BitOffs>
         <Properties>
@@ -27643,7 +28090,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>256</BitOffs>
         <Properties>
@@ -27737,7 +28184,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>192</BitOffs>
         <Properties>
@@ -27885,7 +28332,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>nSearchDirTwoardsCam</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -27897,7 +28344,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>nSearchDirOffCam</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Direction</Type>
+        <Type Namespace="Tc2_MC2">MC_Direction</Type>
         <BitSize>16</BitSize>
         <BitOffs>80</BitOffs>
         <Properties>
@@ -27947,7 +28394,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>320</BitOffs>
         <Properties>
@@ -28031,7 +28478,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbHome</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Home</Type>
+        <Type Namespace="Tc2_MC2">MC_Home</Type>
         <BitSize>7168</BitSize>
         <BitOffs>448</BitOffs>
       </SubItem>
@@ -28134,7 +28581,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>128</BitOffs>
         <Properties>
@@ -28218,7 +28665,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbHome</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Home</Type>
+        <Type Namespace="Tc2_MC2">MC_Home</Type>
         <BitSize>7168</BitSize>
         <BitOffs>256</BitOffs>
       </SubItem>
@@ -28331,7 +28778,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>224</BitOffs>
         <Properties>
@@ -28401,7 +28848,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -28591,7 +29038,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>96</BitOffs>
         <Properties>
@@ -28788,7 +29235,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>256</BitOffs>
         <Properties>
@@ -28858,7 +29305,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -29024,7 +29471,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>96</BitOffs>
         <Properties>
@@ -29174,7 +29621,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbHomeResetCalibrationFlag</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Home</Type>
+        <Type Namespace="Tc2_MC2">MC_Home</Type>
         <Comment>Only used for reset of calibration flag</Comment>
         <BitSize>7168</BitSize>
         <BitOffs>10432</BitOffs>
@@ -29302,7 +29749,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>96</BitOffs>
         <Properties>
@@ -29522,7 +29969,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>224</BitOffs>
         <Properties>
@@ -29619,7 +30066,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbMoveVelocity</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Type>
+        <Type Namespace="Tc2_MC2">MC_MoveVelocity</Type>
         <BitSize>8768</BitSize>
         <BitOffs>23552</BitOffs>
       </SubItem>
@@ -29725,7 +30172,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_GearInDynOptions</Name>
+      <Name Namespace="Tc2_MC2">ST_GearInDynOptions</Name>
       <BitSize>8</BitSize>
       <SubItem>
         <Name>CCVmode</Name>
@@ -29736,7 +30183,7 @@ ELSE:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_CoupleSlave</Name>
+      <Name Namespace="Tc2_MC2">_ST_TcNC_CoupleSlave</Name>
       <BitSize>384</BitSize>
       <SubItem>
         <Name>nSlaveType</Name>
@@ -29793,11 +30240,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_GearInDyn</Name>
+      <Name Namespace="Tc2_MC2">MC_GearInDyn</Name>
       <BitSize>4032</BitSize>
       <SubItem>
         <Name>Master</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -29810,7 +30257,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Slave</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
@@ -29888,7 +30335,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>BufferMode</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_BufferMode</Type>
+        <Type Namespace="Tc2_MC2">MC_BufferMode</Type>
         <BitSize>16</BitSize>
         <BitOffs>384</BitOffs>
         <Properties>
@@ -29900,7 +30347,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_GearInDynOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_GearInDynOptions</Type>
         <Comment> optional parameters </Comment>
         <BitSize>8</BitSize>
         <BitOffs>400</BitOffs>
@@ -29989,7 +30436,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>480</BitOffs>
       </SubItem>
@@ -30001,7 +30448,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>592</BitOffs>
         <Default>
@@ -30028,7 +30475,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>sCouple</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_TcNC_CoupleSlave</Type>
+        <Type Namespace="Tc2_MC2">_ST_TcNC_CoupleSlave</Type>
         <BitSize>384</BitSize>
         <BitOffs>3136</BitOffs>
       </SubItem>
@@ -30080,7 +30527,7 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_GearOutOptions</Name>
+      <Name Namespace="Tc2_MC2">ST_GearOutOptions</Name>
       <BitSize>8</BitSize>
       <SubItem>
         <Name>reserved</Name>
@@ -30095,11 +30542,11 @@ ELSE:
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_GearOut</Name>
+      <Name Namespace="Tc2_MC2">MC_GearOut</Name>
       <BitSize>1792</BitSize>
       <SubItem>
         <Name>Slave</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
@@ -30124,7 +30571,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Options</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_GearOutOptions</Type>
+        <Type Namespace="Tc2_MC2">ST_GearOutOptions</Type>
         <Comment> optional parameters </Comment>
         <BitSize>8</BitSize>
         <BitOffs>72</BitOffs>
@@ -30189,7 +30636,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>LastExecutionResult</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_ST_FunctionBlockResults</Type>
+        <Type Namespace="Tc2_MC2">_ST_FunctionBlockResults</Type>
         <BitSize>96</BitSize>
         <BitOffs>160</BitOffs>
       </SubItem>
@@ -30201,7 +30648,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>iState</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>272</BitOffs>
         <Default>
@@ -30485,7 +30932,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>MasterAxis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2">AXIS_REF</Type>
         <BitSize>9088</BitSize>
         <BitOffs>1344</BitOffs>
         <Properties>
@@ -30609,7 +31056,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Status</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AxisStatus</Type>
+        <Type Namespace="Tc2_MC2">ST_AxisStatus</Type>
         <BitSize>768</BitSize>
         <BitOffs>10560</BitOffs>
         <Properties>
@@ -30669,7 +31116,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <BitSize>32</BitSize>
         <BitOffs>12192</BitOffs>
         <Properties>
@@ -30702,49 +31149,49 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbReset</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Reset</Type>
+        <Type Namespace="Tc2_MC2">MC_Reset</Type>
         <BitSize>1632</BitSize>
         <BitOffs>12288</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbPower</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Power</Type>
+        <Type Namespace="Tc2_MC2">MC_Power</Type>
         <BitSize>768</BitSize>
         <BitOffs>13952</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbHalt</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Halt</Type>
+        <Type Namespace="Tc2_MC2">MC_Halt</Type>
         <BitSize>8640</BitSize>
         <BitOffs>14720</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbJog</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Jog</Type>
+        <Type Namespace="Tc2_MC2">MC_Jog</Type>
         <BitSize>44352</BitSize>
         <BitOffs>23360</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbMoveVelocity</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveVelocity</Type>
+        <Type Namespace="Tc2_MC2">MC_MoveVelocity</Type>
         <BitSize>8768</BitSize>
         <BitOffs>67712</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbMoveRelative</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveRelative</Type>
+        <Type Namespace="Tc2_MC2">MC_MoveRelative</Type>
         <BitSize>8832</BitSize>
         <BitOffs>76480</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbMoveAbsolute</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveAbsolute</Type>
+        <Type Namespace="Tc2_MC2">MC_MoveAbsolute</Type>
         <BitSize>8832</BitSize>
         <BitOffs>85312</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbMoveModulo</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_MoveModulo</Type>
+        <Type Namespace="Tc2_MC2">MC_MoveModulo</Type>
         <BitSize>8896</BitSize>
         <BitOffs>94144</BitOffs>
       </SubItem>
@@ -30756,13 +31203,13 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbGearInDyn</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_GearInDyn</Type>
+        <Type Namespace="Tc2_MC2">MC_GearInDyn</Type>
         <BitSize>4032</BitSize>
         <BitOffs>156800</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbGearOut</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_GearOut</Type>
+        <Type Namespace="Tc2_MC2">MC_GearOut</Type>
         <BitSize>1792</BitSize>
         <BitOffs>160832</BitOffs>
       </SubItem>
@@ -30862,13 +31309,13 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbSetPos</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Type>
+        <Type Namespace="Tc2_MC2">MC_SetPosition</Type>
         <BitSize>1984</BitSize>
         <BitOffs>128</BitOffs>
       </SubItem>
       <SubItem>
         <Name>fbJog</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Jog</Type>
+        <Type Namespace="Tc2_MC2">MC_Jog</Type>
         <BitSize>44352</BitSize>
         <BitOffs>2112</BitOffs>
       </SubItem>
@@ -31069,7 +31516,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>fbSetPos</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_SetPosition</Type>
+        <Type Namespace="Tc2_MC2">MC_SetPosition</Type>
         <BitSize>1984</BitSize>
         <BitOffs>128</BitOffs>
       </SubItem>
@@ -31186,11 +31633,11 @@ ELSE:
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_ReadParameterSet</Name>
+      <Name Namespace="Tc2_MC2">MC_ReadParameterSet</Name>
       <BitSize>1600</BitSize>
       <SubItem>
         <Name>Parameter</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">ST_AxisParameterSet</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">ST_AxisParameterSet</Type>
         <BitSize>32</BitSize>
         <BitOffs>32</BitOffs>
         <Properties>
@@ -31202,7 +31649,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>Axis</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
+        <Type Namespace="Tc2_MC2" ReferenceTo="true">AXIS_REF</Type>
         <Comment>Reference to an axis</Comment>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
@@ -31285,7 +31732,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>state</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_E_TcMC_STATES</Type>
+        <Type Namespace="Tc2_MC2">_E_TcMC_STATES</Type>
         <BitSize>16</BitSize>
         <BitOffs>224</BitOffs>
         <Default>
@@ -31373,7 +31820,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>mcReadParams</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_ReadParameterSet</Type>
+        <Type Namespace="Tc2_MC2">MC_ReadParameterSet</Type>
         <BitSize>1600</BitSize>
         <BitOffs>192</BitOffs>
       </SubItem>
@@ -32154,7 +32601,7 @@ ELSE:
       <BitSize>8576</BitSize>
       <SubItem>
         <Name>stParameters</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">ST_AxisParameterSet</Type>
+        <Type Namespace="Tc2_MC2">ST_AxisParameterSet</Type>
         <Comment> Parameters to check against</Comment>
         <BitSize>8192</BitSize>
         <BitOffs>64</BitOffs>
@@ -33011,7 +33458,7 @@ ELSE:
       </SubItem>
       <SubItem>
         <Name>mcPower</Name>
-        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">MC_Power</Type>
+        <Type Namespace="Tc2_MC2">MC_Power</Type>
         <BitSize>768</BitSize>
         <BitOffs>11392</BitOffs>
       </SubItem>
@@ -33204,7 +33651,7 @@ ELSE:
       </EnumInfo>
     </DataType>
     <DataType>
-      <Name Namespace="LCLS_General">FB_Index</Name>
+      <Name Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_Index</Name>
       <Comment> Index FB
 A. Wallace 2016-9-3
 
@@ -33956,7 +34403,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
       </SubItem>
       <SubItem>
         <Name>LogBuffIdx</Name>
-        <Type Namespace="LCLS_General">FB_Index</Type>
+        <Type Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_Index</Type>
         <BitSize>96</BitSize>
         <BitOffs>34496</BitOffs>
         <Default>
@@ -36873,6 +37320,23 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>3072040</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+            <Comment> AMS Net ID used for FB_EcatDiag, among others </Comment>
+            <BitSize>48</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</BaseType>
+            <Properties>
+              <Property>
+                <Name>naming</Name>
+                <Value>omit</Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633585256</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
             <BitSize>2048</BitSize>
             <BaseType GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}">NCTOPLC_AXIS_REF</BaseType>
@@ -36882,7 +37346,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634221568</BitOffs>
+            <BitOffs>634305088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.iVoltageINT</Name>
@@ -36894,7 +37358,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634822944</BitOffs>
+            <BitOffs>634906464</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.fbThermoCouple.bError</Name>
@@ -36913,7 +37377,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635015304</BitOffs>
+            <BitOffs>635098824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.fbThermoCouple.bUnderrange</Name>
@@ -36925,7 +37389,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635015312</BitOffs>
+            <BitOffs>635098832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.fbThermoCouple.bOverrange</Name>
@@ -36937,7 +37401,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635015320</BitOffs>
+            <BitOffs>635098840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.fbThermoCouple.iRaw</Name>
@@ -36949,7 +37413,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635015328</BitOffs>
+            <BitOffs>635098848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.fbGetPMVoltage.iRaw</Name>
@@ -36962,7 +37426,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635015584</BitOffs>
+            <BitOffs>635099104</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbGige.fbGetIllPercent.iRaw</Name>
@@ -36975,7 +37439,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635401568</BitOffs>
+            <BitOffs>635485088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbFlowMeter.fRaw</Name>
@@ -36994,7 +37458,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635402528</BitOffs>
+            <BitOffs>635486048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbYagThermoCouple.bError</Name>
@@ -37013,7 +37477,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635402760</BitOffs>
+            <BitOffs>635486280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbYagThermoCouple.bUnderrange</Name>
@@ -37025,7 +37489,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635402768</BitOffs>
+            <BitOffs>635486288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbYagThermoCouple.bOverrange</Name>
@@ -37037,7 +37501,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635402776</BitOffs>
+            <BitOffs>635486296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbYagThermoCouple.iRaw</Name>
@@ -37049,7 +37513,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635402784</BitOffs>
+            <BitOffs>635486304</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.Axis.NcToPlc</Name>
@@ -37061,7 +37525,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637329920</BitOffs>
+            <BitOffs>637413440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.bLimitForwardEnable</Name>
@@ -37084,7 +37548,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637337920</BitOffs>
+            <BitOffs>637421440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.bLimitBackwardEnable</Name>
@@ -37107,7 +37571,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637337928</BitOffs>
+            <BitOffs>637421448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.bHome</Name>
@@ -37130,7 +37594,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637337936</BitOffs>
+            <BitOffs>637421456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.bHardwareEnable</Name>
@@ -37153,7 +37617,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637337952</BitOffs>
+            <BitOffs>637421472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.nRawEncoderULINT</Name>
@@ -37166,7 +37630,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637337984</BitOffs>
+            <BitOffs>637421504</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.nRawEncoderUINT</Name>
@@ -37179,7 +37643,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637338048</BitOffs>
+            <BitOffs>637421568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.nRawEncoderINT</Name>
@@ -37192,7 +37656,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637338064</BitOffs>
+            <BitOffs>637421584</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.Axis.NcToPlc</Name>
@@ -37204,7 +37668,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637351168</BitOffs>
+            <BitOffs>637434688</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.bLimitForwardEnable</Name>
@@ -37227,7 +37691,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637359168</BitOffs>
+            <BitOffs>637442688</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.bLimitBackwardEnable</Name>
@@ -37250,7 +37714,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637359176</BitOffs>
+            <BitOffs>637442696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.bHome</Name>
@@ -37273,7 +37737,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637359184</BitOffs>
+            <BitOffs>637442704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.bHardwareEnable</Name>
@@ -37296,7 +37760,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637359200</BitOffs>
+            <BitOffs>637442720</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.nRawEncoderULINT</Name>
@@ -37309,7 +37773,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637359232</BitOffs>
+            <BitOffs>637442752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.nRawEncoderUINT</Name>
@@ -37322,7 +37786,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637359296</BitOffs>
+            <BitOffs>637442816</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.nRawEncoderINT</Name>
@@ -37335,7 +37799,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637359312</BitOffs>
+            <BitOffs>637442832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.Axis.NcToPlc</Name>
@@ -37347,7 +37811,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637372416</BitOffs>
+            <BitOffs>637455936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.bLimitForwardEnable</Name>
@@ -37370,7 +37834,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637380416</BitOffs>
+            <BitOffs>637463936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.bLimitBackwardEnable</Name>
@@ -37393,7 +37857,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637380424</BitOffs>
+            <BitOffs>637463944</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.bHome</Name>
@@ -37416,7 +37880,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637380432</BitOffs>
+            <BitOffs>637463952</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.bHardwareEnable</Name>
@@ -37439,7 +37903,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637380448</BitOffs>
+            <BitOffs>637463968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.nRawEncoderULINT</Name>
@@ -37452,7 +37916,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637380480</BitOffs>
+            <BitOffs>637464000</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.nRawEncoderUINT</Name>
@@ -37465,7 +37929,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637380544</BitOffs>
+            <BitOffs>637464064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.nRawEncoderINT</Name>
@@ -37478,7 +37942,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637380560</BitOffs>
+            <BitOffs>637464080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.Axis.NcToPlc</Name>
@@ -37490,7 +37954,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637393664</BitOffs>
+            <BitOffs>637477184</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.bLimitForwardEnable</Name>
@@ -37513,7 +37977,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637401664</BitOffs>
+            <BitOffs>637485184</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.bLimitBackwardEnable</Name>
@@ -37536,7 +38000,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637401672</BitOffs>
+            <BitOffs>637485192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.bHome</Name>
@@ -37559,7 +38023,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637401680</BitOffs>
+            <BitOffs>637485200</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.bHardwareEnable</Name>
@@ -37582,7 +38046,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637401696</BitOffs>
+            <BitOffs>637485216</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.nRawEncoderULINT</Name>
@@ -37595,7 +38059,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637401728</BitOffs>
+            <BitOffs>637485248</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.nRawEncoderUINT</Name>
@@ -37608,7 +38072,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637401792</BitOffs>
+            <BitOffs>637485312</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.nRawEncoderINT</Name>
@@ -37621,7 +38085,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637401808</BitOffs>
+            <BitOffs>637485328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.Axis.NcToPlc</Name>
@@ -37633,7 +38097,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637414912</BitOffs>
+            <BitOffs>637498432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.bLimitForwardEnable</Name>
@@ -37656,7 +38120,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637422912</BitOffs>
+            <BitOffs>637506432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.bLimitBackwardEnable</Name>
@@ -37679,7 +38143,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637422920</BitOffs>
+            <BitOffs>637506440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.bHome</Name>
@@ -37702,7 +38166,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637422928</BitOffs>
+            <BitOffs>637506448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.bHardwareEnable</Name>
@@ -37725,7 +38189,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637422944</BitOffs>
+            <BitOffs>637506464</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.nRawEncoderULINT</Name>
@@ -37738,7 +38202,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637422976</BitOffs>
+            <BitOffs>637506496</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.nRawEncoderUINT</Name>
@@ -37751,7 +38215,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637423040</BitOffs>
+            <BitOffs>637506560</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.nRawEncoderINT</Name>
@@ -37764,7 +38228,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637423056</BitOffs>
+            <BitOffs>637506576</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.Axis.NcToPlc</Name>
@@ -37776,7 +38240,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637436160</BitOffs>
+            <BitOffs>637519680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.bLimitForwardEnable</Name>
@@ -37799,7 +38263,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637444160</BitOffs>
+            <BitOffs>637527680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.bLimitBackwardEnable</Name>
@@ -37822,7 +38286,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637444168</BitOffs>
+            <BitOffs>637527688</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.bHome</Name>
@@ -37845,7 +38309,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637444176</BitOffs>
+            <BitOffs>637527696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.bHardwareEnable</Name>
@@ -37868,7 +38332,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637444192</BitOffs>
+            <BitOffs>637527712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.nRawEncoderULINT</Name>
@@ -37881,7 +38345,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637444224</BitOffs>
+            <BitOffs>637527744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.nRawEncoderUINT</Name>
@@ -37894,7 +38358,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637444288</BitOffs>
+            <BitOffs>637527808</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.nRawEncoderINT</Name>
@@ -37907,7 +38371,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637444304</BitOffs>
+            <BitOffs>637527824</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -37925,7 +38389,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634220544</BitOffs>
+            <BitOffs>634304064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbGige.iIlluminatorINT</Name>
@@ -37937,7 +38401,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635401440</BitOffs>
+            <BitOffs>635484960</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbGige.bGigePower</Name>
@@ -37957,7 +38421,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635401456</BitOffs>
+            <BitOffs>635484976</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1.fbGige.fbSetIllPercent.iRaw</Name>
@@ -37970,7 +38434,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635402304</BitOffs>
+            <BitOffs>635485824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
@@ -37990,7 +38454,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>636338504</BitOffs>
+            <BitOffs>636422024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
@@ -38010,7 +38474,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>636833800</BitOffs>
+            <BitOffs>636917320</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.Axis.PlcToNc</Name>
@@ -38022,7 +38486,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637328896</BitOffs>
+            <BitOffs>637412416</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1.bBrakeRelease</Name>
@@ -38045,7 +38509,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637337944</BitOffs>
+            <BitOffs>637421464</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.Axis.PlcToNc</Name>
@@ -38057,7 +38521,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637350144</BitOffs>
+            <BitOffs>637433664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2.bBrakeRelease</Name>
@@ -38080,7 +38544,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637359192</BitOffs>
+            <BitOffs>637442712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.Axis.PlcToNc</Name>
@@ -38092,7 +38556,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637371392</BitOffs>
+            <BitOffs>637454912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3.bBrakeRelease</Name>
@@ -38115,7 +38579,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637380440</BitOffs>
+            <BitOffs>637463960</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.Axis.PlcToNc</Name>
@@ -38127,7 +38591,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637392640</BitOffs>
+            <BitOffs>637476160</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4.bBrakeRelease</Name>
@@ -38150,7 +38614,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637401688</BitOffs>
+            <BitOffs>637485208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.Axis.PlcToNc</Name>
@@ -38162,7 +38626,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637413888</BitOffs>
+            <BitOffs>637497408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5.bBrakeRelease</Name>
@@ -38185,7 +38649,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637422936</BitOffs>
+            <BitOffs>637506456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.Axis.PlcToNc</Name>
@@ -38197,7 +38661,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637435136</BitOffs>
+            <BitOffs>637518656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6.bBrakeRelease</Name>
@@ -38220,7 +38684,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637444184</BitOffs>
+            <BitOffs>637527704</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -43972,19 +44436,20 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>633584864</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Constants.bLittleEndian</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
+            <Name>GeneralConstants.MAX_STATES</Name>
+            <Comment> 16 including "Unknown" is the max for an EPICS MBBI
+ This is the max number of user-defined states (OUT, TARGET1, YAG...)</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
             <Default>
-              <Bool>true</Bool>
+              <Value>15</Value>
             </Default>
             <Properties>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633584888</BitOffs>
+            <BitOffs>633584880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PMPS_PARAM.MAX_ASSERTIONS</Name>
@@ -44028,6 +44493,315 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
             <BitOffs>633584960</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>DefaultGlobals.stSys</Name>
+            <Comment>Included for you</Comment>
+            <BitSize>88</BitSize>
+            <BaseType Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">ST_System</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585216</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.bTrickleTripped</Name>
+            <Comment> Global trickle trip flag</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: @(PREFIX)LCLSGeneral:GlobalLogTrickleTrip
+        io: i
+        field: DESC Tripped by overall log count
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585304</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.iLogPort</Name>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Default>
+              <Value>54321</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: @(PREFIX)LCLSGeneral:LogPort
+        io: io
+        field: DESC The log host UDP port
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585312</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.nMinTimeViolationAcceptable</Name>
+            <Comment> Trip if `nLocalTripThreshold` exceeded `nMinTimeViolationAcceptable` times</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Default>
+              <Value>5</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585328</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>DefaultGlobals.fTimeStamp</Name>
+            <BitSize>64</BitSize>
+            <BaseType>LREAL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585344</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.cLogHost</Name>
+            <Comment>
+    Using the IP address directly avoids DNS configuration issues.
+    While we may want to address this in the future, for now the static IP
+    will suffice:
+
+    $ nslookup ctl-logsrv01
+    Name:   ctl-logsrv01.pcdsn
+    Address: 172.21.32.36
+    </Comment>
+            <BitSize>128</BitSize>
+            <BaseType>STRING(15)</BaseType>
+            <Default>
+              <String>172.21.32.36</String>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: @(PREFIX)LCLSGeneral:LogHost
+        io: io
+        field: DESC The log host IP address
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585408</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.sIpTidbit</Name>
+            <BitSize>56</BitSize>
+            <BaseType>STRING(6)</BaseType>
+            <Default>
+              <String>172.21</String>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585536</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.nLocalTripThreshold</Name>
+            <Comment> Minimum time between log messages</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>TIME</BaseType>
+            <Default>
+              <DateTime>T#1ms</DateTime>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585600</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.nLocalTrickleTripThreshold</Name>
+            <Comment> Default trickle trip, activated by global threshold</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>TIME</BaseType>
+            <Default>
+              <DateTime>T#100ms</DateTime>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585632</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.nTrickleTripTime</Name>
+            <Comment> Default time for log-handler to recognize a trickle overload condition, many log-message FB occasionally creating a message</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>TIME</BaseType>
+            <Default>
+              <DateTime>T#10s</DateTime>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585664</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.nTripResetPeriod</Name>
+            <Comment> Default time for CB auto-reset</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>TIME</BaseType>
+            <Default>
+              <DateTime>T#10m</DateTime>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585696</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.sPlcHostname</Name>
+            <BitSize>648</BitSize>
+            <BaseType>STRING(80)</BaseType>
+            <Default>
+              <String>unknown</String>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633585728</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bLittleEndian</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633586376</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bSimulationMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>false</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633586384</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bFPUSupport</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633586392</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.TCPADS_MAXUDP_BUFFSIZE</Name>
+            <Comment> Ref: https://infosys.beckhoff.com/english.php?content=../content/1033/tcpipserver/html/TcPlcLibTcpIp_FB_SocketUdpSendTo.htm
+        TODO: Activate the "Replace constants" option in the
+        TwinCAT PLC Control-&gt;"Project-&gt;Options...-&gt;Build" dialog window.
+    </Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>10000</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633586400</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.fbRootLogger</Name>
+            <Comment>Instantiated here to be used everywhere</Comment>
+            <BitSize>81984</BitSize>
+            <BaseType Namespace="lcls2_cc_lib.lcls_twincat_motion.PMPS.LCLS_General">FB_LogMessage</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633586432</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.nGlobAccEvents</Name>
+            <Comment> Global log message count</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: @(PREFIX)LCLSGeneral:LogMessageCount
+        io: i
+        field: DESC Total log messages on the last cycle
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633668416</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Logger.nTrickleThreshold</Name>
+            <Comment> If GlobAccEvents goes over this level for longer than the</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>UDINT</BaseType>
+            <Default>
+              <Value>2</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633668448</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>Global_Version.stLibVersion_Tc2_MC2</Name>
             <BitSize>288</BitSize>
             <BaseType GUID="{6F5942ED-BFA1-497D-8225-23C6DAAD0A09}">ST_LibVersion</BaseType>
@@ -44065,18 +44839,18 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633585216</BitOffs>
+            <BitOffs>633668480</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.TcMcGlobal</Name>
             <BitSize>6976</BitSize>
-            <BaseType Namespace="lcls2_cc_lib.lcls_twincat_motion.Tc2_MC2">_TCMCGLOBAL</BaseType>
+            <BaseType Namespace="Tc2_MC2">_TCMCGLOBAL</BaseType>
             <Properties>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633585504</BitOffs>
+            <BitOffs>633668768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.DEFAULT_HOME_POSITION</Name>
@@ -44090,7 +44864,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633592512</BitOffs>
+            <BitOffs>633675776</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Variables.DEFAULT_BACKLASHVALUE</Name>
@@ -44104,7 +44878,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633592576</BitOffs>
+            <BitOffs>633675840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Global_Version.stLibVersion_Tc2_Math</Name>
@@ -44140,37 +44914,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633592640</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bSimulationMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>false</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633592928</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bFPUSupport</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>true</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633592936</BitOffs>
+            <BitOffs>633675904</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nRegisterSize</Name>
@@ -44185,7 +44929,22 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633592944</BitOffs>
+            <BitOffs>633676192</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nPackMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Default>
+              <Value>8</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633676208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Physics.fbScatteringFactors</Name>
@@ -44196,7 +44955,22 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633592960</BitOffs>
+            <BitOffs>633676224</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.RuntimeVersionNumeric</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>DWORD</BaseType>
+            <Default>
+              <Value>50662656</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>634290848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>PRG_IM2L1_PPM.fbIM2L1</Name>
@@ -44206,7 +44980,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-        pv: IM1K1:PPM
+        pv: IM2L1:PPM
         io: io
     </Value>
               </Property>
@@ -44225,7 +44999,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                               .fbYagThermoCouple.iRaw := TIIB[IM2L1-EL3314]^TC Inputs Channel 2^Value</Value>
               </Property>
             </Properties>
-            <BitOffs>634207360</BitOffs>
+            <BitOffs>634290880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL.fbArbiter1</Name>
@@ -44243,7 +45017,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635403328</BitOffs>
+            <BitOffs>635486848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL.fbArbiter2</Name>
@@ -44261,7 +45035,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635870784</BitOffs>
+            <BitOffs>635954304</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL.fbFastFaultOutput1</Name>
@@ -44291,7 +45065,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>636338240</BitOffs>
+            <BitOffs>636421760</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL.fbFastFaultOutput2</Name>
@@ -44321,7 +45095,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>636833536</BitOffs>
+            <BitOffs>636917056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M1</Name>
@@ -44349,7 +45123,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637328832</BitOffs>
+            <BitOffs>637412352</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M2</Name>
@@ -44378,7 +45152,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637350080</BitOffs>
+            <BitOffs>637433600</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M3</Name>
@@ -44406,7 +45180,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637371328</BitOffs>
+            <BitOffs>637454848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M4</Name>
@@ -44433,7 +45207,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637392576</BitOffs>
+            <BitOffs>637476096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M5</Name>
@@ -44460,7 +45234,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637413824</BitOffs>
+            <BitOffs>637497344</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Main.M6</Name>
@@ -44487,7 +45261,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637435072</BitOffs>
+            <BitOffs>637518592</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersion</Name>
@@ -44517,7 +45291,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637456320</BitOffs>
+            <BitOffs>637539840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -44547,51 +45321,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637456384</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.nPackMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>UINT</BaseType>
-            <Default>
-              <Value>8</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>637456448</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bMulticoreSupport</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>false</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>637456464</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.RuntimeVersionNumeric</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>32</BitSize>
-            <BaseType>DWORD</BaseType>
-            <Default>
-              <Value>50662656</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>637456480</BitOffs>
+            <BitOffs>637539904</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersionNumeric</Name>
@@ -44606,7 +45336,21 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637456512</BitOffs>
+            <BitOffs>637539968</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bMulticoreSupport</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>false</Bool>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>637540000</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -44620,21 +45364,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637456544</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
-            <BitSize>32</BitSize>
-            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
-            <Properties>
-              <Property>
-                <Name>no_init</Name>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>637458592</BitOffs>
+            <BitOffs>637540032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -44652,7 +45382,21 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637458624</BitOffs>
+            <BitOffs>637542080</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
+            <BitSize>32</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+            <Properties>
+              <Property>
+                <Name>no_init</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>637543104</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -44666,7 +45410,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637459648</BitOffs>
+            <BitOffs>637543136</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -44687,7 +45431,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637459680</BitOffs>
+            <BitOffs>637543168</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -44713,7 +45457,7 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>637511200</BitOffs>
+            <BitOffs>637594688</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -44774,15 +45518,15 @@ The BPTM will throw an error if the arbiter does not have enough space for the t
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2023-03-01T10:01:57</Value>
+          <Value>2023-03-16T13:08:32</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>741376</Value>
+          <Value>745472</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>79372288</Value>
+          <Value>79384576</Value>
         </Property>
       </Properties>
     </Module>

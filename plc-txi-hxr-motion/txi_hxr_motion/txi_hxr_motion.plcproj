@@ -40,10 +40,20 @@
     <Compile Include="POUs\PRG_SL3L1_SCATTER.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\temp\FB_SLITS.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\temp\FB_SLITS_POWER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\temp\FB_SLITS_SCATTER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DUTs" />
     <Folder Include="GVLs" />
+    <Folder Include="POUs\temp" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>
@@ -67,6 +77,10 @@
     <PlaceholderReference Include="PMPS">
       <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
       <Namespace>PMPS</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_MC2">
+      <DefaultResolution>Tc2_MC2, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_MC2</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
