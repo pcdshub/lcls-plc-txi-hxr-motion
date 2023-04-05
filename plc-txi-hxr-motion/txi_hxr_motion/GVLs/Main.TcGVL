@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="Main" Id="{f24be19c-614f-40ca-920f-63ab753550b2}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
 	// IM2L1-PPM-MMS
+	// This is a comment
     {attribute 'pytmc' := 'pv: IM2L1:PPM:MMS'}
     {attribute 'TcLinkTo' := '.bLimitForwardEnable  := TIIB[IM2L1-EL7041]^STM Status^Status^Digital input 1;
                               .bLimitBackwardEnable := TIIB[IM2L1-EL7041]^STM Status^Status^Digital input 2;
