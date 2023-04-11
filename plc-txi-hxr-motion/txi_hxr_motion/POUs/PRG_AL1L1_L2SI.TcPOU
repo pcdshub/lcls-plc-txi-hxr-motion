@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="PRG_AL1L1_L2SI" Id="{b9065558-4333-4ee9-89fd-a00441a263a3}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_AL1L1_L2SI
+VAR
+    {attribute 'pytmc' := '
+        pv: AL1L1:L2SI
+        io: io
+    '}
+    {attribute 'TcLinkTo' := '.fbLaser.iLaserINT := TIIB[AL1L1-EL4004]^AO Outputs Channel 1^Analog output;
+                              .fbLaser.iShutdownINT := TIIB[AL1L1-EL4004]^AO Outputs Channel 2^Analog output'}
+    fbAL1L1: FB_REF;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbAL1L1.nTransitionAssertionID := 16#6120;
+fbAL1L1.nUnknownAssertionID := 16#6129;
+
+fbAL1L1.stOut.fPosition := -33.5; // Upper limit
+fbAL1L1.stOut.bUseRawCounts := FALSE;
+fbAL1L1.stOut.nRequestAssertionID := 16#6121;
+fbAL1L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+fbAL1L1.stOut.bValid := TRUE;
+
+fbAL1L1.stIn.fPosition := -75; // Current position at time of edit
+fbAL1L1.stIn.bUseRawCounts := FALSE;
+fbAL1L1.stIn.nRequestAssertionID := 16#6122;
+fbAL1L1.stIn.stBeamParams := PMPS_GVL.cst0RateBeam;
+fbAL1L1.stIn.bValid := TRUE;
+
+
+fbAL1L1(
+    stYStage := Main.M2,
+    fbArbiter := GVL.fbArbiter1,
+    fbFFHWO := GVL.fbFastFaultOutput2);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

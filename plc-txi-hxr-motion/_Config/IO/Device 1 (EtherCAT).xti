@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.12" ClassName="CDevEtherCATDef" SubType="111">
-	<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="172.21.136.31.2.1" RemoteName="Device 1 (EtherCAT)">
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CDevEtherCATDef" SubType="111">
+	<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="172.21.136.31.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
 		<Name>__FILENAME__</Name>
 		<AddressInfo>
 			<Ccat>
@@ -30,11 +30,11 @@
 		<Image Id="1" AddrType="9" ImageType="3">
 			<Name>Image</Name>
 		</Image>
-		<Box File="Term 1 (EK1200).xti" Id="1">
+		<Box File="R17-DRL-03 (EK1200).xti" Id="7">
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
 		</Box>
-		<Box File="Term 13 (EK1100).xti" Id="13">
-			<EtherCAT PortABoxInfo="#x01000006"/>
+		<Box File="100H1-L1S01-DRL-02 (EK1100).xti" Id="17">
+			<EtherCAT PortABoxInfo="#x0100000c"/>
 		</Box>
 		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120"/>
 	</Device>
