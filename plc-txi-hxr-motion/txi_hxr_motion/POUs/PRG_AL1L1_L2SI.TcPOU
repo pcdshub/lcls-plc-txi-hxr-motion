@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <POU Name="PRG_AL1L1_L2SI" Id="{b9065558-4333-4ee9-89fd-a00441a263a3}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_AL1L1_L2SI
 VAR
@@ -29,7 +29,7 @@ fbAL1L1.stIn.bValid := TRUE;
 
 
 fbAL1L1(
-    stYStage := Main.M2,
+    stYStage := Main.M1,
     fbArbiter := GVL.fbArbiter1,
     fbFFHWO := GVL.fbFastFaultOutput2);]]></ST>
     </Implementation>
