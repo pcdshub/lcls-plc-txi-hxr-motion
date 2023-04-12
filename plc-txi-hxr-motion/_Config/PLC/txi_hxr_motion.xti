@@ -1140,16 +1140,6 @@ External Setpoint Generation:
 	</Project>
 	<Mappings>
 		<OwnerA Name="txi_hxr_motion Instance">
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^AL1L1-L2SI (EK1100)^AL1L1-EL2004">
-				<Link VarA="PlcTask Outputs^Main.M1.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^AL1L1-L2SI (EK1100)^AL1L1-EL5042">
-				<Link VarA="PlcTask Inputs^Main.M1.nRawEncoderULINT" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^AL1L1-L2SI (EK1100)^AL1L1-EL7041">
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
-			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL2004">
 				<Link VarA="PlcTask Outputs^Main.M2.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Outputs^PRG_IM2L1_PPM.fbIM2L1.fbGige.bGigePower" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
