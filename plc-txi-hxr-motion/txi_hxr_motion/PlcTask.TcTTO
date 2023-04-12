@@ -5,7 +5,7 @@
     <CycleTime>10000</CycleTime>
     <Priority>20</Priority>
     <PouCall>
-      <Name>PRG_IM2L1_PPM</Name>
+      <Name>PRG_01_PLCTASK</Name>
     </PouCall>
     <TaskFBGuid>{ec6c6bb6-a819-40e0-86b7-fed0377d4fd9}</TaskFBGuid>
     <Fb_init>{6e506151-f461-48ca-994c-86c4244098a3}</Fb_init>
