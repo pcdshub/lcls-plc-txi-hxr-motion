@@ -15,7 +15,7 @@ END_VAR]]></Declaration>
       <ST><![CDATA[fbAL1L1.nTransitionAssertionID := 16#6120;
 fbAL1L1.nUnknownAssertionID := 16#6129;
 
-fbAL1L1.stOut.fPosition := -36.0; // Upper limit
+fbAL1L1.stOut.fPosition := -38.0; // Upper limit
 fbAL1L1.stOut.bUseRawCounts := FALSE;
 fbAL1L1.stOut.nRequestAssertionID := 16#6121;
 fbAL1L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
