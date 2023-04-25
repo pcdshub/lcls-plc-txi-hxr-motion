@@ -20,10 +20,10 @@
 		<AxisFolder Name="SL3L1-SCATTER"/>
 		<AxisFolder Name="AL1L1-L2SI"/>
 		<Axis File="Axis 2 IM2L1-PPM-MMS.xti" Id="2"/>
-		<Axis File="SL3L1-BOTTOM-M50.xti" Id="50"/>
-		<Axis File="SL3L1-TOP-M51.xti" Id="51"/>
-		<Axis File="SL3L1-NORTH-M52.xti" Id="52"/>
-		<Axis File="SL3L1-SOUTH-M53.xti" Id="53"/>
+		<Axis File="Axis 3 SL3L1-BOTTOM-MMS.xti" Id="3"/>
+		<Axis File="Axis 5 SL3L1-NORTH-MMS.xti" Id="5"/>
+		<Axis File="Axis 6 SL3L1-SOUTH-MMS.xti" Id="6"/>
+		<Axis File="Axis 4 SL3L1-TOP-MMS.xti" Id="4"/>
 		<Axis File="Axis 1 AL1L1-L2SI-MMS.xti" Id="1"/>
 	</NC>
 </TcSmItem>
