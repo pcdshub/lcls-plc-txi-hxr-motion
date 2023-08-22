@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_SL3L1_SCATTER" Id="{ec40e478-deb3-446d-8a75-204a67706054}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_SL3L1_SCATTER
 VAR
@@ -65,8 +65,8 @@ fbSL3L1(stTopBlade:=  Main.M4,
         stNorthBlade:=  Main.M5,
         stSouthBlade:=  Main.M6,
         bExecuteMotion:=bExecuteMotion,
-        io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
-        fbArbiter := GVL_PMPS.fbArbiter1);
+        io_fbFFHWO := GVL.fbFastFaultOutput2,
+        fbArbiter := GVL.fbArbiter1);
 
 //fbSL3L1.M_CheckPMPS(2);
 

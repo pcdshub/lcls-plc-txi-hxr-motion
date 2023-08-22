@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="Main" Id="{f24be19c-614f-40ca-920f-63ab753550b2}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -39,6 +39,6 @@ VAR_GLOBAL
                               .bLimitBackwardEnable := TIIB[SL3L1-EL7031-E7]^STM Status^Status^Digital input 2;
                               .nRawEncoderUINT      := TIIB[SL3L1-EL5101-E8]^ENC Status compact^Counter value'}
     M6: DUT_MotionStage := (sName := 'SL3L1:SCATTER:MMS:SOUTH');
-END_VAR]]></Declaration>
+END_VAR ]]></Declaration>
   </GVL>
 </TcPlcObject>

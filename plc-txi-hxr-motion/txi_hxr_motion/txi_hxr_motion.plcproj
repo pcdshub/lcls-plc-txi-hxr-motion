@@ -40,6 +40,9 @@
     <Compile Include="POUs\PRG_SL3L1_SCATTER.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_TXI_PM.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\temp\FB_SLITS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
