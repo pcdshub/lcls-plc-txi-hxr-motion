@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_IM2L1_PPM" Id="{40a81e7e-9eb3-43d1-8501-18158a7ada09}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_IM2L1_PPM
 VAR
@@ -23,31 +23,31 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbIM2L1.nTransitionAssertionID := 16#2110;
-fbIM2L1.nUnknownAssertionID := 16#2119;
+      <ST><![CDATA[//fbIM2L1.nTransitionAssertionID := 16#2110;
+//fbIM2L1.nUnknownAssertionID := 16#2119;
 
 fbIM2L1.stOut.fPosition := -8.82;
 fbIM2L1.stOut.bUseRawCounts := FALSE;
-fbIM2L1.stOut.nRequestAssertionID := 16#2111;
-fbIM2L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+//fbIM2L1.stOut.nRequestAssertionID := 16#2111;
+//fbIM2L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
 fbIM2L1.stOut.bValid := TRUE;
 
 fbIM2L1.stPower.fPosition := -47.92;
 fbIM2L1.stPower.bUseRawCounts := FALSE;
-fbIM2L1.stPower.nRequestAssertionID := 16#2112;
-fbIM2L1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
+//fbIM2L1.stPower.nRequestAssertionID := 16#2112;
+//fbIM2L1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
 fbIM2L1.stPower.bValid := TRUE;
 
 fbIM2L1.stYag1.fPosition := -71.92;
 fbIM2L1.stYag1.bUseRawCounts := FALSE;
-fbIM2L1.stYag1.nRequestAssertionID := 16#2113;
-fbIM2L1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
+//fbIM2L1.stYag1.nRequestAssertionID := 16#2113;
+//fbIM2L1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
 fbIM2L1.stYag1.bValid := TRUE;
 
 fbIM2L1.stYag2.fPosition := -97.93;
 fbIM2L1.stYag2.bUseRawCounts := FALSE;
-fbIM2L1.stYag2.nRequestAssertionID := 16#2114;
-fbIM2L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
+//fbIM2L1.stYag2.nRequestAssertionID := 16#2114;
+//fbIM2L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
 fbIM2L1.stYag2.bValid := TRUE;
 
 fbIM2L1(
