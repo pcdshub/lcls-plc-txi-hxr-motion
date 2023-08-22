@@ -1,11 +1,11 @@
-#!c:/Repos/ads-ioc/R0.6.1///bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.1/bin/rhel7-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: plc-txi-hxr-motion.tsproj
 #        PLC name: txi_hxr_motion (txi_hxr_motion Instance)
-# Generated using: pytmc 2.15.2.dev0+g73bd2d9.d20230727
-# Project version: unknown
-#    Project hash: unknown
+# Generated using: pytmc 2.15.1
+# Project version: 743beb2
+#    Project hash: 743beb21744ac3dcf50d90868c3162aaf7eebcff
 #     PLC IP/host: 172.21.136.31
 #      PLC Net ID: 172.21.136.31.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -28,7 +28,7 @@
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "" )
+epicsEnvSet("ENGINEER", "jozamudi" )
 epicsEnvSet("LOCATION", "PLC:TXI:HXR:MOT" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
@@ -48,7 +48,7 @@ epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
 epicsEnvSet("ADS_TIME_SOURCE",  "0")
 
 # Add a route to the PLC automatically:
-system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.136.31 ^172.*$")
+system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.136.31 ^172.*")
 
 # adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
 #    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
@@ -210,7 +210,7 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TXI:HXR:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=unknown,VERSION=unknown,PYTMC=2.15.2.dev0+g73bd2d9.d20230727,PLC_HOST=172.21.136.31")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=743beb2,VERSION=743beb2,PYTMC=2.15.1,PLC_HOST=172.21.136.31")
 
 #   LCLS General: * -> 2.7.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=LCLS_General,VERSION=2.7.0,VENDOR=SLAC")
