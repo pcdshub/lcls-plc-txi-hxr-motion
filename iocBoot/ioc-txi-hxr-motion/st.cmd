@@ -4,8 +4,8 @@
 #         Project: plc-txi-hxr-motion.tsproj
 #        PLC name: txi_hxr_motion (txi_hxr_motion Instance)
 # Generated using: pytmc 2.15.1
-# Project version: 743beb2
-#    Project hash: 743beb21744ac3dcf50d90868c3162aaf7eebcff
+# Project version: 61e2754
+#    Project hash: 61e275403c4d994d9ea0ce8f1176c1af41cfaa22
 #     PLC IP/host: 172.21.136.31
 #      PLC Net ID: 172.21.136.31.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -144,7 +144,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "50")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "BOTTOM")
-epicsEnvSet("DESC",            "Main.M3 / SL3L1-BOTTOM-M50")
+epicsEnvSet("DESC",            "Main.M50 / SL3L1-BOTTOM-M50")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -159,7 +159,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "51")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "TOP")
-epicsEnvSet("DESC",            "Main.M4 / SL3L1-TOP-M51")
+epicsEnvSet("DESC",            "Main.M51 / SL3L1-TOP-M51")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -174,7 +174,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "52")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "NORTH")
-epicsEnvSet("DESC",            "Main.M5 / SL3L1-NORTH-M52")
+epicsEnvSet("DESC",            "Main.M52 / SL3L1-NORTH-M52")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -189,7 +189,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "53")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "SOUTH")
-epicsEnvSet("DESC",            "Main.M6 / SL3L1-SOUTH-M53")
+epicsEnvSet("DESC",            "Main.M53 / SL3L1-SOUTH-M53")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -210,7 +210,7 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TXI:HXR:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=743beb2,VERSION=743beb2,PYTMC=2.15.1,PLC_HOST=172.21.136.31")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=61e2754,VERSION=61e2754,PYTMC=2.15.1,PLC_HOST=172.21.136.31")
 
 #   LCLS General: * -> 2.7.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=LCLS_General,VERSION=2.7.0,VENDOR=SLAC")
