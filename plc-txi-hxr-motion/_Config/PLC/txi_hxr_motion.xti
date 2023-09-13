@@ -2361,7 +2361,7 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL2004">
 				<Link VarA="PlcTask Outputs^Main.M2.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^PRG_IM2L1_PPM.fbIM2L1.fbGige.bGigePower" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_IM2L1_PPM.fbIM2L1.fbGige.bGigePower" VarB="Channel 3^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL3062">
 				<Link VarA="PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbPowerMeter.iVoltageINT" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
