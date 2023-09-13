@@ -4,8 +4,8 @@
 #         Project: plc-txi-hxr-motion.tsproj
 #        PLC name: txi_hxr_motion (txi_hxr_motion Instance)
 # Generated using: pytmc 2.15.1
-# Project version: 61e2754
-#    Project hash: 61e275403c4d994d9ea0ce8f1176c1af41cfaa22
+# Project version: e98f46f
+#    Project hash: e98f46f8bc40d1b6390b061261b86a859531b827
 #     PLC IP/host: 172.21.136.31
 #      PLC Net ID: 172.21.136.31.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -210,7 +210,7 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TXI:HXR:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=61e2754,VERSION=61e2754,PYTMC=2.15.1,PLC_HOST=172.21.136.31")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=e98f46f,VERSION=e98f46f,PYTMC=2.15.1,PLC_HOST=172.21.136.31")
 
 #   LCLS General: * -> 2.7.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=LCLS_General,VERSION=2.7.0,VENDOR=SLAC")
