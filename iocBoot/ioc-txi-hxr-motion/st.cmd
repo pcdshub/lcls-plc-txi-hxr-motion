@@ -1,11 +1,11 @@
-#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.1/bin/rhel7-x86_64/adsIoc
+#!c:/Repos/ads-ioc/R0.6.1///bin/rhel7-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: plc-txi-hxr-motion.tsproj
 #        PLC name: txi_hxr_motion (txi_hxr_motion Instance)
-# Generated using: pytmc 2.15.0
-# Project version: 8de7a4e
-#    Project hash: 8de7a4e0e626a7c35c76138079b2319005cc3c0e
+# Generated using: pytmc 2.15.2.dev0+g73bd2d9.d20230727
+# Project version: unknown
+#    Project hash: unknown
 #     PLC IP/host: 172.21.136.31
 #      PLC Net ID: 172.21.136.31.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -14,7 +14,7 @@
 #
 # Libraries:
 #
-#   LCLS General: * -> 2.8.1 (SLAC)
+#   LCLS General: * -> 2.9.1 (SLAC)
 #   lcls-twincat-motion: * -> 1.8.0 (SLAC)
 #   lcls-twincat-physics: * -> 0.0.0 (SLAC)
 #   lcls2-cc-lib: * -> 1.1.2 (SLAC)
@@ -29,7 +29,7 @@
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "jozamudi" )
+epicsEnvSet("ENGINEER", "" )
 epicsEnvSet("LOCATION", "PLC:TXI:HXR:MOT" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
@@ -42,14 +42,14 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.136.31")
 epicsEnvSet("AMSID",            "172.21.136.31.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "4683")
+epicsEnvSet("ADS_MAX_PARAMS",   "4946")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
 epicsEnvSet("ADS_TIME_SOURCE",  "0")
 
 # Add a route to the PLC automatically:
-system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.136.31 ^172.*")
+system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.136.31 ^172.*$")
 
 # adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
 #    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
@@ -81,7 +81,7 @@ cd "$(ADS_IOC_TOP)/db"
 
 epicsEnvSet("MOTOR_PORT",     "PLC_ADS")
 epicsEnvSet("PREFIX",         "PLC:TXI:HXR:MOT:")
-epicsEnvSet("NUMAXES",        "53")
+epicsEnvSet("NUMAXES",        "6")
 epicsEnvSet("MOVE_POLL_RATE", "200")
 epicsEnvSet("IDLE_POLL_RATE", "1000")
 
@@ -142,10 +142,10 @@ dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR
 dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
-epicsEnvSet("AXIS_NO",         "50")
+epicsEnvSet("AXIS_NO",         "3")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "BOTTOM")
-epicsEnvSet("DESC",            "Main.M3 / SL3L1-BOTTOM-M50")
+epicsEnvSet("DESC",            "Main.M3 / Axis 3 SL3L1-BOTTOM-MMS")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -157,10 +157,10 @@ dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR
 dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
-epicsEnvSet("AXIS_NO",         "51")
+epicsEnvSet("AXIS_NO",         "4")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "TOP")
-epicsEnvSet("DESC",            "Main.M4 / SL3L1-TOP-M51")
+epicsEnvSet("DESC",            "Main.M4 / Axis 4 SL3L1-TOP-MMS")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -172,10 +172,10 @@ dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR
 dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
-epicsEnvSet("AXIS_NO",         "52")
+epicsEnvSet("AXIS_NO",         "5")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "NORTH")
-epicsEnvSet("DESC",            "Main.M5 / SL3L1-NORTH-M52")
+epicsEnvSet("DESC",            "Main.M5 / Axis 5 SL3L1-NORTH-MMS")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -187,10 +187,10 @@ dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR
 dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
-epicsEnvSet("AXIS_NO",         "53")
+epicsEnvSet("AXIS_NO",         "6")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "SOUTH")
-epicsEnvSet("DESC",            "Main.M6 / SL3L1-SOUTH-M53")
+epicsEnvSet("DESC",            "Main.M6 / Axis 6 SL3L1-SOUTH-MMS")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -211,10 +211,10 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TXI:HXR:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=8de7a4e,VERSION=8de7a4e,PYTMC=2.15.0,PLC_HOST=172.21.136.31")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=unknown,VERSION=unknown,PYTMC=2.15.2.dev0+g73bd2d9.d20230727,PLC_HOST=172.21.136.31")
 
-#   LCLS General: * -> 2.8.1 (SLAC)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=LCLS_General,VERSION=2.8.1,VENDOR=SLAC")
+#   LCLS General: * -> 2.9.1 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=LCLS_General,VERSION=2.9.1,VENDOR=SLAC")
 #   lcls-twincat-motion: * -> 1.8.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=lcls-twincat-motion,VERSION=1.8.0,VENDOR=SLAC")
 #   lcls-twincat-physics: * -> 0.0.0 (SLAC)
@@ -237,8 +237,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("txi_hxr_motion.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 3683
-callbackSetQueueSize(9366)
+# Total records: 3946
+callbackSetQueueSize(9892)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:TXI:HXR:MOT:")

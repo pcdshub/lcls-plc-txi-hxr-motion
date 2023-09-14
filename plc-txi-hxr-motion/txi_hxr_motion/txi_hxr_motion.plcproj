@@ -40,6 +40,9 @@
     <Compile Include="POUs\PRG_SL3L1_SCATTER.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_TXI_PM.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\temp\FB_SLITS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -97,7 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <PlaceholderResolution Include="LCLS General">
-      <Resolution>LCLS General, 2.8.1 (SLAC)</Resolution>
+      <Resolution>LCLS General, 2.9.1 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
       <Resolution>lcls-twincat-motion, 1.8.0 (SLAC)</Resolution>
