@@ -3,9 +3,9 @@
 #
 #         Project: plc-txi-hxr-motion.tsproj
 #        PLC name: txi_hxr_motion (txi_hxr_motion Instance)
-# Generated using: pytmc 2.15.1
-# Project version: e98f46f
-#    Project hash: e98f46f8bc40d1b6390b061261b86a859531b827
+# Generated using: pytmc 2.15.0
+# Project version: 8de7a4e
+#    Project hash: 8de7a4e0e626a7c35c76138079b2319005cc3c0e
 #     PLC IP/host: 172.21.136.31
 #      PLC Net ID: 172.21.136.31.1.1
 # ** DEVELOPMENT MODE IOC **
@@ -14,13 +14,14 @@
 #
 # Libraries:
 #
-#   LCLS General: * -> 2.7.0 (SLAC)
-#   lcls-twincat-motion: * -> 2.0.1 (SLAC)
-#   lcls2-cc-lib: * -> 2.0.0 (SLAC)
-#   PMPS: * -> 3.0.14 (SLAC - LCLS)
-#   Tc2_MC2: * -> 3.3.42.0 (Beckhoff Automation GmbH)
+#   LCLS General: * -> 2.8.1 (SLAC)
+#   lcls-twincat-motion: * -> 1.8.0 (SLAC)
+#   lcls-twincat-physics: * -> 0.0.0 (SLAC)
+#   lcls2-cc-lib: * -> 1.1.2 (SLAC)
+#   PMPS: * -> 2.1.0 (SLAC - LCLS)
+#   Tc2_MC2: * -> 3.3.48.0 (Beckhoff Automation GmbH)
 #   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
-#   Tc2_System: * -> 3.4.24.0 (Beckhoff Automation GmbH)
+#   Tc2_System: * -> 3.4.26.0 (Beckhoff Automation GmbH)
 #   Tc3_Module: * -> 3.3.21.0 (Beckhoff Automation GmbH)
 #
 ################### AUTO-GENERATED DO NOT EDIT ###################
@@ -41,7 +42,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.136.31")
 epicsEnvSet("AMSID",            "172.21.136.31.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "6979")
+epicsEnvSet("ADS_MAX_PARAMS",   "4683")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -144,7 +145,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "50")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "BOTTOM")
-epicsEnvSet("DESC",            "Main.M50 / SL3L1-BOTTOM-M50")
+epicsEnvSet("DESC",            "Main.M3 / SL3L1-BOTTOM-M50")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -159,7 +160,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "51")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "TOP")
-epicsEnvSet("DESC",            "Main.M51 / SL3L1-TOP-M51")
+epicsEnvSet("DESC",            "Main.M4 / SL3L1-TOP-M51")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -174,7 +175,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "52")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "NORTH")
-epicsEnvSet("DESC",            "Main.M52 / SL3L1-NORTH-M52")
+epicsEnvSet("DESC",            "Main.M5 / SL3L1-NORTH-M52")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -189,7 +190,7 @@ dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(
 epicsEnvSet("AXIS_NO",         "53")
 epicsEnvSet("MOTOR_PREFIX",    "SL3L1:SCATTER:MMS:")
 epicsEnvSet("MOTOR_NAME",      "SOUTH")
-epicsEnvSet("DESC",            "Main.M53 / SL3L1-SOUTH-M53")
+epicsEnvSet("DESC",            "Main.M6 / SL3L1-SOUTH-M53")
 epicsEnvSet("EGU",             "mm")
 epicsEnvSet("PREC",            "3")
 epicsEnvSet("AXISCONFIG",      "")
@@ -210,22 +211,24 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TXI:HXR:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=e98f46f,VERSION=e98f46f,PYTMC=2.15.1,PLC_HOST=172.21.136.31")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=8de7a4e,VERSION=8de7a4e,PYTMC=2.15.0,PLC_HOST=172.21.136.31")
 
-#   LCLS General: * -> 2.7.0 (SLAC)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=LCLS_General,VERSION=2.7.0,VENDOR=SLAC")
-#   lcls-twincat-motion: * -> 2.0.1 (SLAC)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=lcls-twincat-motion,VERSION=2.0.1,VENDOR=SLAC")
-#   lcls2-cc-lib: * -> 2.0.0 (SLAC)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=lcls2-cc-lib,VERSION=2.0.0,VENDOR=SLAC")
-#   PMPS: * -> 3.0.14 (SLAC - LCLS)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=PMPS,VERSION=3.0.14,VENDOR=SLAC - LCLS")
-#   Tc2_MC2: * -> 3.3.42.0 (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=Tc2_MC2,VERSION=3.3.42.0,VENDOR=Beckhoff Automation GmbH")
+#   LCLS General: * -> 2.8.1 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=LCLS_General,VERSION=2.8.1,VENDOR=SLAC")
+#   lcls-twincat-motion: * -> 1.8.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=lcls-twincat-motion,VERSION=1.8.0,VENDOR=SLAC")
+#   lcls-twincat-physics: * -> 0.0.0 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=lcls-twincat-physics,VERSION=0.0.0,VENDOR=SLAC")
+#   lcls2-cc-lib: * -> 1.1.2 (SLAC)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=lcls2-cc-lib,VERSION=1.1.2,VENDOR=SLAC")
+#   PMPS: * -> 2.1.0 (SLAC - LCLS)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=PMPS,VERSION=2.1.0,VENDOR=SLAC - LCLS")
+#   Tc2_MC2: * -> 3.3.48.0 (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=Tc2_MC2,VERSION=3.3.48.0,VENDOR=Beckhoff Automation GmbH")
 #   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=Tc2_Standard,VERSION=3.3.3.0,VENDOR=Beckhoff Automation GmbH")
-#   Tc2_System: * -> 3.4.24.0 (Beckhoff Automation GmbH)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=Tc2_System,VERSION=3.4.24.0,VENDOR=Beckhoff Automation GmbH")
+#   Tc2_System: * -> 3.4.26.0 (Beckhoff Automation GmbH)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=Tc2_System,VERSION=3.4.26.0,VENDOR=Beckhoff Automation GmbH")
 #   Tc3_Module: * -> 3.3.21.0 (Beckhoff Automation GmbH)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=Tc3_Module,VERSION=3.3.21.0,VENDOR=Beckhoff Automation GmbH")
 
@@ -234,8 +237,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("txi_hxr_motion.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 5979
-callbackSetQueueSize(13958)
+# Total records: 3683
+callbackSetQueueSize(9366)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:TXI:HXR:MOT:")
