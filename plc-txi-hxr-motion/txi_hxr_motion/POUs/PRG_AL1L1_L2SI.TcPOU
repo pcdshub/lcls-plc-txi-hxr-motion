@@ -15,13 +15,13 @@ END_VAR]]></Declaration>
       <ST><![CDATA[fbAL1L1.nTransitionAssertionID := 16#6120;
 fbAL1L1.nUnknownAssertionID := 16#6129;
 
-fbAL1L1.stOut.fPosition := -33.5; // Upper limit
+fbAL1L1.stOut.fPosition := -38.0; // Upper limit
 fbAL1L1.stOut.bUseRawCounts := FALSE;
 fbAL1L1.stOut.nRequestAssertionID := 16#6121;
 fbAL1L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
 fbAL1L1.stOut.bValid := TRUE;
 
-fbAL1L1.stIn.fPosition := -75; // Current position at time of edit
+fbAL1L1.stIn.fPosition := -90.0; // Current position at time of edit
 fbAL1L1.stIn.bUseRawCounts := FALSE;
 fbAL1L1.stIn.nRequestAssertionID := 16#6122;
 fbAL1L1.stIn.stBeamParams := PMPS_GVL.cst0RateBeam;
@@ -31,7 +31,7 @@ fbAL1L1.stIn.bValid := TRUE;
 fbAL1L1(
     stYStage := Main.M1,
     fbArbiter := GVL.fbArbiter1,
-    fbFFHWO := GVL.fbFastFaultOutput2);]]></ST>
+    fbFFHWO := GVL.fbFastFaultOutput1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
