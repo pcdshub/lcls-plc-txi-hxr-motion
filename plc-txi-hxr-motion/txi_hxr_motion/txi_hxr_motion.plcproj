@@ -15,6 +15,10 @@
     <Implicit_KindOfTask>{a521790c-6f08-495f-8290-7f6854b80f87}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{51acda4d-9ff1-43f6-827c-ca807666b355}</Implicit_Jitter_Distribution>
     <LibraryReferences>{fb4ea8ae-af1c-44b1-bb74-52e08d373ed3}</LibraryReferences>
+    <Company>SLAC</Company>
+    <Released>true</Released>
+    <Title>txi-hxr-motion</Title>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GVLs\GVL.TcGVL">
@@ -38,6 +42,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_SL3L1_SCATTER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_TXI_PM.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\temp\FB_SLITS.TcPOU">
@@ -97,7 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <PlaceholderResolution Include="LCLS General">
-      <Resolution>LCLS General, 2.8.1 (SLAC)</Resolution>
+      <Resolution>LCLS General, 2.9.1 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-motion">
       <Resolution>lcls-twincat-motion, 1.8.0 (SLAC)</Resolution>

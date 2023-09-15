@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_TXI_PM" Id="{a9b7ce6f-dc97-45a5-9bd2-1b09ac1d1e70}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_TXI_PM
+VAR
+    {attribute 'pytmc' := '
+        pv: TXI:PPM:01
+        io: io
+    '}
+    {attribute 'TcLinkTo' := '.fbPowerMeter.iVoltageINT := TIID^Device 1 (EtherCAT)^TXI Power Meter (EK1100)^PM-EL3064^AI Standard Channel 1^Value'}
+    fbTXIPM: FB_PPM;
+    dumbymotor : DUT_MotionStage;
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbTXIPM(
+    fbArbiter := GVL.fbArbiter1,
+    fbFFHWO := GVL.fbFastFaultOutput1,
+    stYStage := dumbymotor);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

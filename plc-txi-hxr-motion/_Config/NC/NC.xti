@@ -19,11 +19,11 @@
 		<AxisFolder Name="IM2L1-PPM"/>
 		<AxisFolder Name="SL3L1-SCATTER"/>
 		<AxisFolder Name="AL1L1-L2SI"/>
-		<Axis File="Axis 2 IM2L1-PPM-MMS.xti" Id="2"/>
-		<Axis File="Axis 3 SL3L1-BOTTOM-MMS.xti" Id="3"/>
-		<Axis File="Axis 5 SL3L1-NORTH-MMS.xti" Id="5"/>
-		<Axis File="Axis 6 SL3L1-SOUTH-MMS.xti" Id="6"/>
-		<Axis File="Axis 4 SL3L1-TOP-MMS.xti" Id="4"/>
-		<Axis File="Axis 1 AL1L1-L2SI-MMS.xti" Id="1"/>
+		<Axis File="IM2L1-PPM-MMS.xti" Id="2"/>
+		<Axis File="SL3L1-BOTTOM-MMS.xti" Id="3"/>
+		<Axis File="SL3L1-NORTH-MMS.xti" Id="5"/>
+		<Axis File="SL3L1-SOUTH-MMS.xti" Id="6"/>
+		<Axis File="SL3L1-TOP-MMS.xti" Id="4"/>
+		<Axis File="AL1L1-L2SI-MMS.xti" Id="1"/>
 	</NC>
 </TcSmItem>
