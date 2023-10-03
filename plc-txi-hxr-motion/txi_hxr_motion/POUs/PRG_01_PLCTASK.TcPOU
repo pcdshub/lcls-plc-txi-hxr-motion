@@ -9,7 +9,8 @@ END_VAR
       <ST><![CDATA[PRG_AL1L1_L2SI();
 PRG_IM2L1_PPM();
 PRG_SL3L1_SCATTER();
-PRG_TXI_PM();]]></ST>
+PRG_TXI_PM();
+PRG_PMPS();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
