@@ -258,7 +258,11 @@ Links
         txi_hxr_motion Instance, PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbYagThermoCouple.bOverrange, TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL3314, TC Inputs Channel 2^Status^Overrange
         txi_hxr_motion Instance, PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbYagThermoCouple.bUnderrange, TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL3314, TC Inputs Channel 2^Status^Underrange
         txi_hxr_motion Instance, PlcTask Inputs^PRG_IM2L1_PPM.fbIM2L1.fbYagThermoCouple.iRaw, TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL3314, TC Inputs Channel 2^Value
+        txi_hxr_motion Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.i_stCurrentBP, TIID^Device 1 (EtherCAT)^R17-DRL-03 (EK1200)^PMPS_PRE, IO Inputs^CurrentBP
+        txi_hxr_motion Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_state, TIID^Device 1 (EtherCAT)^R17-DRL-03 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO state
+        txi_hxr_motion Instance, PlcTask Inputs^PRG_PMPS.fbArbiterIO.xTxPDO_toggle, TIID^Device 1 (EtherCAT)^R17-DRL-03 (EK1200)^PMPS_PRE, SYNC Inputs^TxPDO toggle
         txi_hxr_motion Instance, PlcTask Inputs^PRG_TXI_PM.fbTXIPM.fbPowerMeter.iVoltageINT, TIID^Device 1 (EtherCAT)^TXI Power Meter (EK1100)^PM-EL3064, AI Standard Channel 1^Value
+        txi_hxr_motion Instance, PlcTask Outputs^GVL.fbFastFaultOutput1.q_xFastFaultOut, TIID^Device 1 (EtherCAT)^R17-DRL-03 (EK1200)^PMPS_FFO, Channel 1^Output
         txi_hxr_motion Instance, PlcTask Outputs^Main.M1.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^AL1L1-L2SI-MMS, Inputs^FromPlc
         txi_hxr_motion Instance, PlcTask Outputs^Main.M1.bBrakeRelease, TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^AL1L1-L2SI (EK1100)^AL1L1-EL2004, Channel 1^Output
         txi_hxr_motion Instance, PlcTask Outputs^Main.M2.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^IM2L1-PPM-MMS, Inputs^FromPlc
@@ -271,3 +275,4 @@ Links
         txi_hxr_motion Instance, PlcTask Outputs^PRG_AL1L1_L2SI.fbAL1L1.fbLaser.iShutdownINT, TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^AL1L1-L2SI (EK1100)^AL1L1-EL4004, AO Outputs Channel 2^Analog output
         txi_hxr_motion Instance, PlcTask Outputs^PRG_IM2L1_PPM.fbIM2L1.fbGige.bGigePower, TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL2004, Channel 3^Output
         txi_hxr_motion Instance, PlcTask Outputs^PRG_IM2L1_PPM.fbIM2L1.fbGige.iIlluminatorINT, TIID^Device 1 (EtherCAT)^100H1-L1S01-DRL-02 (EK1100)^E1 (EK1122)^IM2L1-PPM (EK1100)^IM2L1-EL4004, AO Outputs Channel 1^Analog output
+        txi_hxr_motion Instance, PlcTask Outputs^PRG_PMPS.fbArbiterIO.q_stRequestedBP, TIID^Device 1 (EtherCAT)^R17-DRL-03 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP

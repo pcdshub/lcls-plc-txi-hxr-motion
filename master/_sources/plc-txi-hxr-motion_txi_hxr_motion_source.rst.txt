@@ -17,18 +17,12 @@ GVL
     VAR_GLOBAL
         {attribute 'pytmc' := 'pv: PLC:TXI:MOTION:ARB:01'}
         fbArbiter1: FB_Arbiter(1);
-        {attribute 'pytmc' := 'pv: PLC:TXI:MOTION:ARB:02'}
-        fbArbiter2: FB_Arbiter(2);
 
-        // For devices between the mirror and the stopper
+        // For all devices after Stopper
         {attribute 'pytmc' := 'pv: PLC:TXI:MOTION:FFO:01'}
         {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
         fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID:='');
 
-        // For devices after the stopper
-        {attribute 'pytmc' := 'pv: PLC:TXI:MOTION:FFO:02'}
-        {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
-        fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID:='');
     END_VAR
 
 
@@ -807,11 +801,14 @@ PRG_01_PLCTASK
 
     PROGRAM PRG_01_PLCTASK
     VAR
+        fbLogHandler: FB_LogHandler;
     END_VAR
     PRG_AL1L1_L2SI();
     PRG_IM2L1_PPM();
     PRG_SL3L1_SCATTER();
     PRG_TXI_PM();
+    PRG_PMPS();
+    fbLogHandler();
 
     END_PROGRAM
 
@@ -819,6 +816,7 @@ PRG_01_PLCTASK
 Related:
     * `PRG_AL1L1_L2SI`_
     * `PRG_IM2L1_PPM`_
+    * `PRG_PMPS`_
     * `PRG_SL3L1_SCATTER`_
     * `PRG_TXI_PM`_
 
@@ -892,31 +890,31 @@ PRG_IM2L1_PPM
         fbIM2L1: FB_PPM;
 
     END_VAR
-    //fbIM2L1.nTransitionAssertionID := 16#2110;
-    //fbIM2L1.nUnknownAssertionID := 16#2119;
+    fbIM2L1.nTransitionAssertionID := 16#2210;
+    fbIM2L1.nUnknownAssertionID := 16#2219;
 
     fbIM2L1.stOut.fPosition := -8.82;
     fbIM2L1.stOut.bUseRawCounts := FALSE;
-    //fbIM2L1.stOut.nRequestAssertionID := 16#2111;
-    //fbIM2L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM2L1.stOut.nRequestAssertionID := 16#2211;
+    fbIM2L1.stOut.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM2L1.stOut.bValid := TRUE;
 
     fbIM2L1.stPower.fPosition := -47.92;
     fbIM2L1.stPower.bUseRawCounts := FALSE;
-    //fbIM2L1.stPower.nRequestAssertionID := 16#2112;
-    //fbIM2L1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM2L1.stPower.nRequestAssertionID := 16#2212;
+    fbIM2L1.stPower.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM2L1.stPower.bValid := TRUE;
 
     fbIM2L1.stYag1.fPosition := -71.92;
     fbIM2L1.stYag1.bUseRawCounts := FALSE;
-    //fbIM2L1.stYag1.nRequestAssertionID := 16#2113;
-    //fbIM2L1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM2L1.stYag1.nRequestAssertionID := 16#2213;
+    fbIM2L1.stYag1.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM2L1.stYag1.bValid := TRUE;
 
     fbIM2L1.stYag2.fPosition := -94.92;
     fbIM2L1.stYag2.bUseRawCounts := FALSE;
-    //fbIM2L1.stYag2.nRequestAssertionID := 16#2114;
-    //fbIM2L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
+    fbIM2L1.stYag2.nRequestAssertionID := 16#2214;
+    fbIM2L1.stYag2.stBeamParams := PMPS_GVL.cstFullBeam;
     fbIM2L1.stYag2.bValid := TRUE;
 
     fbIM2L1(
@@ -930,6 +928,28 @@ PRG_IM2L1_PPM
 Related:
     * `GVL`_
     * `Main`_
+
+
+PRG_PMPS
+^^^^^^^^
+
+::
+
+    PROGRAM PRG_PMPS
+    VAR
+        fbArbiterIO: FB_SubSysToArbiter_IO;
+    END_VAR
+    GVL.fbFastFaultOutput1.Execute(i_xVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.L_Stopper.ST1L1]);
+    fbArbiterIO(
+        i_bVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.L_Stopper.ST1L1],
+        Arbiter:=GVL.fbArbiter1,
+        fbFFHWO:=GVL.fbFastFaultOutput1);
+
+    END_PROGRAM
+
+
+Related:
+    * `GVL`_
 
 
 PRG_SL3L1_SCATTER

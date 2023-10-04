@@ -10,12 +10,12 @@ Box Hierarchy
 
 
 
-    #. Term 9 (EL2202) [ID: 9]
+    #. PMPS_FFO [ID: 9]
             EL2202 2Ch. Dig. Output 24V, 0.5A
 
 
 
-    #. Term 10 (EL6695) [ID: 10]
+    #. PMPS_PRE [ID: 10]
             EL6695 EtherCAT Bridge terminal (Primary)
 
 
