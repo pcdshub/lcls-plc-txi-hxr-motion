@@ -16,7 +16,7 @@
     <Implicit_Jitter_Distribution>{51acda4d-9ff1-43f6-827c-ca807666b355}</Implicit_Jitter_Distribution>
     <LibraryReferences>{fb4ea8ae-af1c-44b1-bb74-52e08d373ed3}</LibraryReferences>
     <Company>SLAC</Company>
-    <Released>true</Released>
+    <Released>false</Released>
     <Title>txi-hxr-motion</Title>
     <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
@@ -39,6 +39,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_01_PLCTASK.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_PMPS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_SL3L1_SCATTER.TcPOU">
@@ -116,7 +119,7 @@
       <Resolution>lcls2-cc-lib, 1.1.2 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 2.1.0 (SLAC - LCLS)</Resolution>
+      <Resolution>PMPS, 3.0.14 (SLAC - LCLS)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="SysDir">
       <Resolution>SysDir, 3.5.12.0 (System)</Resolution>
