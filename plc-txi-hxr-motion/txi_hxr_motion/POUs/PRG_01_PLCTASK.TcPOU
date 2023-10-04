@@ -3,6 +3,7 @@
   <POU Name="PRG_01_PLCTASK" Id="{c49bac57-9deb-43fc-afb7-c59d4de2967e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_01_PLCTASK
 VAR
+    fbLogHandler: FB_LogHandler;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -10,7 +11,8 @@ END_VAR
 PRG_IM2L1_PPM();
 PRG_SL3L1_SCATTER();
 PRG_TXI_PM();
-PRG_PMPS();]]></ST>
+PRG_PMPS();
+fbLogHandler();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
