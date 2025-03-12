@@ -17,6 +17,13 @@
 			<Name>NC-Task 1 SVB</Name>
 		</SvbTask>
 		<AxisFolder Name="IM2L1-PPM"/>
-		<Axis File="Axis 1 IM2L1-PPM-MMS.xti" Id="1"/>
+		<AxisFolder Name="SL3L1-SCATTER"/>
+		<AxisFolder Name="AL1L1-L2SI"/>
+		<Axis File="IM2L1-PPM-MMS.xti" Id="2"/>
+		<Axis File="SL3L1-BOTTOM-MMS.xti" Id="3"/>
+		<Axis File="SL3L1-NORTH-MMS.xti" Id="5"/>
+		<Axis File="SL3L1-SOUTH-MMS.xti" Id="6"/>
+		<Axis File="SL3L1-TOP-MMS.xti" Id="4"/>
+		<Axis File="AL1L1-L2SI-MMS.xti" Id="1"/>
 	</NC>
 </TcSmItem>

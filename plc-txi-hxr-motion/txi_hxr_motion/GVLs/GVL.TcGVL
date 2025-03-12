@@ -3,8 +3,14 @@
   <GVL Name="GVL" Id="{dda08f07-2a5a-410d-93e8-702475ce2970}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
-END_VAR
+    {attribute 'pytmc' := 'pv: PLC:TXI:MOTION:ARB:01'}
+    fbArbiter1: FB_Arbiter(1);
 
-// Test Comment]]></Declaration>
+    // For all devices after Stopper
+    {attribute 'pytmc' := 'pv: PLC:TXI:MOTION:FFO:01'}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
+    fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID:='');
+
+END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
