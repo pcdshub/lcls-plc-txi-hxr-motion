@@ -1,16 +1,15 @@
-#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.1/bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R1.0.0/bin/rhel9-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: plc-txi-hxr-motion.tsproj
 #        PLC name: txi_hxr_motion (txi_hxr_motion Instance)
-# Generated using: pytmc 2.15.1
-# Project version: 7eecdc8
-#    Project hash: 7eecdc87921f8b35659305599de191b5cd8cdf61
+# Generated using: pytmc 2.18.2
+# Project version: 7c81a57
+#    Project hash: 7c81a57537e01da8cf442bceb73ceb24a5ff82b1
 #     PLC IP/host: 172.21.136.31
 #      PLC Net ID: 172.21.136.31.1.1
-# ** DEVELOPMENT MODE IOC **
-# * Using IOC boot directory for autosave.
-# * Archiver settings will not be configured.
+#  ** Production mode IOC **
+#  Using /cds/data/iocData for autosave and archiver settings.
 #
 # Libraries:
 #
@@ -18,21 +17,26 @@
 #   lcls-twincat-motion: * -> 1.8.0 (SLAC)
 #   lcls-twincat-physics: * -> 0.0.0 (SLAC)
 #   lcls2-cc-lib: * -> 1.1.2 (SLAC)
-#   PMPS: * -> 2.1.0 (SLAC - LCLS)
+#   PMPS: * -> 3.0.14 (SLAC - LCLS)
 #   Tc2_MC2: * -> 3.3.48.0 (Beckhoff Automation GmbH)
 #   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
 #   Tc2_System: * -> 3.4.26.0 (Beckhoff Automation GmbH)
 #   Tc3_Module: * -> 3.3.21.0 (Beckhoff Automation GmbH)
 #
 ################### AUTO-GENERATED DO NOT EDIT ###################
+# Run common startup commands for linux soft IOC's
+< $(IOC_COMMON)/All/pre_linux.cmd
 < envPaths
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "jozamudi" )
+epicsEnvSet("ENGINEER", "zlentz" )
 epicsEnvSet("LOCATION", "PLC:TXI:HXR:MOT" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
+
+# Run common startup commands for linux soft IOC's
+< /reg/d/iocCommon/All/pre_linux.cmd
 
 # Register all support components
 dbLoadDatabase("$(ADS_IOC_TOP)/dbd/adsIoc.dbd")
@@ -42,14 +46,14 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.136.31")
 epicsEnvSet("AMSID",            "172.21.136.31.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "4946")
+epicsEnvSet("ADS_MAX_PARAMS",   "3994")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
 epicsEnvSet("ADS_TIME_SOURCE",  "0")
 
 # Add a route to the PLC automatically:
-system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.136.31 ^172.*")
+system("${ADS_IOC_TOP}/scripts/add_route.sh 172.21.136.31 ^172.*$")
 
 # adsAsynPortDriverConfigure(portName, ipaddr, amsaddr, amsport,
 #    asynParamTableSize, priority, noAutoConnect, defaultSampleTimeMS,
@@ -208,10 +212,10 @@ dbLoadRecords("save_restoreStatus.db", "P=PLC:TXI:HXR:MOT:")
 dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 
 ## TwinCAT task, application, and project information databases ##
-dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT,IDX=1")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT,IDX=1,TASK_PORT=350")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:TXI:HXR:MOT")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=7eecdc8,VERSION=7eecdc8,PYTMC=2.15.1,PLC_HOST=172.21.136.31")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:TXI:HXR:MOT,PROJECT=plc-txi-hxr-motion.tsproj,HASH=7c81a57,VERSION=7c81a57,PYTMC=2.18.2,PLC_HOST=172.21.136.31")
 
 #   LCLS General: * -> 2.9.1 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=LCLS_General,VERSION=2.9.1,VENDOR=SLAC")
@@ -221,8 +225,8 @@ dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=lcls-t
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=lcls-twincat-physics,VERSION=0.0.0,VENDOR=SLAC")
 #   lcls2-cc-lib: * -> 1.1.2 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=lcls2-cc-lib,VERSION=1.1.2,VENDOR=SLAC")
-#   PMPS: * -> 2.1.0 (SLAC - LCLS)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=PMPS,VERSION=2.1.0,VENDOR=SLAC - LCLS")
+#   PMPS: * -> 3.0.14 (SLAC - LCLS)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=PMPS,VERSION=3.0.14,VENDOR=SLAC - LCLS")
 #   Tc2_MC2: * -> 3.3.48.0 (Beckhoff Automation GmbH)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:TXI:HXR:MOT,DEPENDENCY=Tc2_MC2,VERSION=3.3.48.0,VENDOR=Beckhoff Automation GmbH")
 #   Tc2_Standard: * -> 3.3.3.0 (Beckhoff Automation GmbH)
@@ -237,8 +241,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("txi_hxr_motion.db", "PORT=$(ASYN_PORT),PREFIX=PLC:TXI:HXR:MOT:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 3946
-callbackSetQueueSize(9892)
+# Total records: 2994
+callbackSetQueueSize(7988)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:TXI:HXR:MOT:")
@@ -247,14 +251,21 @@ save_restoreSet_DatedBackupFiles(1)
 set_pass0_restoreFile("info_positions.sav")
 set_pass1_restoreFile("info_settings.sav")
 
-# ** Development IOC Settings **
-# Development IOC autosave and archive files go in the IOC top directory:
-cd "$(IOC_TOP)"
+# ** Production IOC Settings **
+set_savefile_path("$(IOC_DATA)/$(IOC)/autosave")
+set_requestfile_path("$(IOC_DATA)/$(IOC)/autosave")
 
-# (Development mode) Create info_positions.req and info_settings.req
+# Production IOC autosave files go in iocData:
+cd "$(IOC_DATA)/$(IOC)/autosave"
+
+# Create info_positions.req and info_settings.req
 makeAutosaveFiles()
-# (Development mode) Create the archiver file
+
+cd "$(IOC_DATA)/$(IOC)/archive"
+
+# Create $(IOC).archive
 makeArchiveFromDbInfo("$(IOC).archive", "archive")
+cd "$(IOC_TOP)"
 
 # Configure access security: this is required for caPutLog.
 asSetFilename("$(ACF_FILE)")
@@ -279,4 +290,7 @@ caPutLogInit("$(EPICS_CAPUTLOG_HOST):$(EPICS_CAPUTLOG_PORT)", 0)
 # Start autosave backups
 create_monitor_set( "info_positions.req", 10, "" )
 create_monitor_set( "info_settings.req", 60, "" )
+
+# All IOCs should dump some common info after initial startup.
+< /reg/d/iocCommon/All/post_linux.cmd
 
