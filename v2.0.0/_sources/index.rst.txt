@@ -1,0 +1,30 @@
+lcls-plc-txi-hxr-motion
+-----------------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: plc-txi-hxr-motion
+
+    plc-txi-hxr-motion_pragmas
+    plc-txi-hxr-motion_nc
+    plc-txi-hxr-motion_ethercat
+    plc-txi-hxr-motion_boxes
+    plc-txi-hxr-motion_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: txi_hxr_motion
+
+    plc-txi-hxr-motion_txi_hxr_motion_summary
+    plc-txi-hxr-motion_txi_hxr_motion_epics
+    plc-txi-hxr-motion_txi_hxr_motion_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
